@@ -1,170 +1,181 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
-  </head>
-  <body class="page__body">
-    <header class="page-header">
-      <a class="page-header__logo">
-        <svg class="page-header__icon" width="34" height="38">
-          <use xlink:href="./img/sprite.svg#icon-logo"></use>
-        </svg>
-        <img src="./img/cat-logo-name.svg" alt="Лого название «CAT ENERGY»" width="101" height="18">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <ul class="main-nav__routes site-routes">
-          <li class="site-routes__item site-routes__item--active">Главная</li>
-          <li class="site-routes__item">Каталог продукции</li>
-          <li class="site-routes__item">Подбор программы</li>
-        </ul>
-      </nav>
-    </header>
-    <main class="page-main">
-      <section class="hero">
-        <h1 class="hero__title">Функциональное питание для котов</h1>
-        <p class="hero__description">Занялся собой? Займись котом!</p>
-        <button class="hero__button button" type="button">Подобрать программу</button>
-      </section>
-      <section class="programs">
-        <h2 class="visually-hidden">Программы для работы с питомцем</h2>
-        <ul class="programs__list">
-          <li class="programs__item">
-            <h3 class="programs__title">Похудение</h3>
-            <p class="programs__description">
-              Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? 
-              Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
-            </p>
-            <a href="./catalog.html" class="programs__link">Каталог Slim</a>
-          </li>
-          <li class="programs__item">
-            <h3 class="programs__title">Набор массы</h3>
-            <p class="programs__description">
-              Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro 
-              поможет вашему коту нарастить необходимые мышцы!
-            </p>
-            <a href="./catalog.html" class="programs__link">Каталог Pro</a>
-          </li>
-        </ul>
-      </section>
-      <section class="features">
-        <h2 class="features__title">Как это работает</h2>
-        <ul class="features__list">
-          <li class="features__item features__item--healthy">
-            <p class="features__description">
-              Функциональное питание
-              содержит только полезные
-              питательные вещества.
-            </p>
-          </li>
-          <li class="features__item features__item--flexible">
-            <p class="features__description">
-              Выпускается в виде порошка,
-              который нужно лишь залить
-              кипятком и готово.
-            </p>
-          </li>
-          <li class="features__item features__item--nutritious">
-            <p class="features__description">
-              Замените один-два приема
-              обычной еды на наше
-              функциональное питание.
-            </p>
-          </li>
-          <li class="features__item features__item--effective">
-            <p class="features__description">
-              Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-            </p>
-          </li>
-        </ul>
-      </section>
-      <section class="ambassador">
-        <h2 class="ambassador__title">Живой пример</h2>
-        <p class="ambassador__description">
-          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
-          по-прежнему спит по 16 часов в день.
-        </p>
-        <dl class="ambassador__results">
-          <dt class="ambassador__result">
-            5 кг
-          </dt>
-          <dd class="ambassador__measure">
-            Снижение веса
-          </dd>
-          <dt class="ambassador__result">
-            60 дней
-          </dt>
-          <dd class="ambassador__measure">Затрачено времени</dd>
-        </dl>
-        <p class="ambassador__expenses">Затраты на питание: 15 000 руб.</p>
-        <div class="range">
-          <div class="range__scale">
-            <div class="range__bar"></div>
-          </div>
-          <div class="range__min">
-            <p class="ambassador__range-title">Было</p>
-          </div>
-          <div class="range__max">
-            <p class="ambassador__range-title">Стало</p>
-          </div>
-        </div>
-      </section>
-      <section class="contact-us">
-        <h2 class="visually-hidden">Приглашаем к сотрудничеству дилеров!</h2>
-        <p class="contact-us__title">
-          ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург
-        </p>
-        <address class="contact-us__address"></address>
-        <iframe
-          class="contact-us__map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003049!2d30.32085871602379!3d59.938719169054266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sua!4v1606385982656!5m2!1sen!2sua"
-          width="320px"
-          height="362px">
-        </iframe>
-      </section>
-    </main>
-    <footer class="page-footer">
-      <a class="page-header__logo">
-        <img class="page-footer__logo" src="./img/cat-logo-name.svg" alt="Лого название «CAT ENERGY»" width="128" height="24">
-      </a>
-      <section class="page-footer_socials socials">
-        <ul class="socials__list">
-          <li>
-            <a href="">
-              <span class="visually-hidden">ВКонтакте</span>
-              <svg class="socials__logo" width="23" height="16">
-                <use xlink:href="./img/sprite.svg#vk-logo"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href=""><span class="visually-hidden">Инстаграм</span>
-              <svg class="socials__logo" width="16" height="16">
-                <use xlink:href="./img/sprite.svg#ig-logo"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href=""><span class="visually-hidden">Фейсбук</span>
-              <svg class="socials__logo" width="22" height="22">
-                <use xlink:href="./img/sprite.svg#fb-logo"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <p class="footer__copyright">
-        <span class="footer__copyright-name">HTML Academy</span>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <svg class="footer__copyright-icon" width="27" height="34">
-            <use xlink:href="./img/sprite.svg#html-academy-logo"></use>
-          </svg>
-        </a>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo">
+      <svg class="page-header__icon" width="34" height="38">
+        <use xlink:href="./img/sprite.svg#icon-logo"></use>
+      </svg>
+      <img src="https://via.placeholder.com/101x18" alt="Лого название «CAT ENERGY»" width="101" height="18">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <ul class="main-nav__routes site-routes">
+        <li class="site-routes__item site-routes__item--active">
+          <a class="site-routes__link">Главная</a>
+        </li>
+        <li class="site-routes__item">
+          <a class="site-routes__link" href="./catalog.html">Каталог продукции</a>
+        </li>
+        <li class="site-routes__item">
+          <a class="site-routes__link" href="./form.html">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <section class="hero">
+      <h1 class="hero__title">Функциональное питание для котов</h1>
+      <p class="hero__description">Занялся собой? Займись котом!</p>
+      <img class="hero__overlay" width="280" height="270" src="https://via.placeholder.com/280x270"
+        alt="Банка питания «CAT ENERGY» PRO 0% Natural с курицей 500 грамм">
+      <a class="hero__button button" href="./form.html">Подобрать программу</a>
+    </section>
+    <section class="programs">
+      <h2 class="visually-hidden">Программы для работы с питомцем</h2>
+      <ul class="programs__list">
+        <li class="programs__item">
+          <h3 class="programs__title">Похудение</h3>
+          <p class="programs__description">
+            Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+            Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
+          </p>
+          <a class="programs__link" href="./catalog.html">Каталог Slim</a>
+        </li>
+        <li class="programs__item">
+          <h3 class="programs__title">Набор массы</h3>
+          <p class="programs__description">
+            Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
+            поможет вашему коту нарастить необходимые мышцы!
+          </p>
+          <a class="programs__link" href="./catalog.html">Каталог Pro</a>
+        </li>
+      </ul>
+    </section>
+    <section class="features">
+      <h2 class="features__title">Как это работает</h2>
+      <ul class="features__list">
+        <li class="features__item features__item--healthy">
+          <p class="features__description">
+            Функциональное питание
+            содержит только полезные
+            питательные вещества.
+          </p>
+        </li>
+        <li class="features__item features__item--flexible">
+          <p class="features__description">
+            Выпускается в виде порошка,
+            который нужно лишь залить
+            кипятком и готово.
+          </p>
+        </li>
+        <li class="features__item features__item--nutritious">
+          <p class="features__description">
+            Замените один-два приема
+            обычной еды на наше
+            функциональное питание.
+          </p>
+        </li>
+        <li class="features__item features__item--effective">
+          <p class="features__description">
+            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section class="ambassador">
+      <h2 class="ambassador__title">Живой пример</h2>
+      <p class="ambassador__description">
+        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+        Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
+        по-прежнему спит по 16 часов в день.
       </p>
-    </footer>
-  </body>
+      <dl class="ambassador__results">
+        <dt class="ambassador__result">
+          5 кг
+        </dt>
+        <dd class="ambassador__measure">
+          Снижение веса
+        </dd>
+        <dt class="ambassador__result">
+          60 дней
+        </dt>
+        <dd class="ambassador__measure">Затрачено времени</dd>
+      </dl>
+      <p class="ambassador__expenses">Затраты на питание: 15 000 руб.</p>
+      <div class="range">
+        <div class="range__scale">
+          <div class="range__bar"></div>
+        </div>
+        <div class="range__min">
+          <p class="ambassador__range-title">Было</p>
+        </div>
+        <div class="range__max">
+          <p class="ambassador__range-title">Стало</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <section class="page-footer__contact-us contact-us">
+      <h2 class="visually-hidden">Как нас найти</h2>
+      <p class="contact-us__attention">Приглашаем к сотрудничеству дилеров!</p>
+      <address class="contact-us__address">
+        ул. Большая
+        Конюшенная, д. 19/8
+        Санкт-Петербург
+      </address>
+      <iframe
+        class="contact-us__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003049!2d30.32085871602379!3d59.938719169054266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sua!4v1606385982656!5m2!1sen!2sua"
+        width="320"
+        height="362">
+      </iframe>
+    </section>
+    <a class="page-footer__logo">
+      <img src="https://via.placeholder.com/128x24" alt="Лого название «CAT ENERGY»" width="128" height="24">
+    </a>
+    <section class="page-footer__socials socials">
+      <h2 class="visually-hidden">Наши социальные сети</h2>
+      <ul class="socials__list">
+        <li>
+          <a href="https://via.placeholder.com/vk">
+            <span class="visually-hidden">ВКонтакте</span>
+            <svg class="socials__logo" width="23" height="16">
+              <use xlink:href="./img/sprite.svg#vk-logo"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://via.placeholder.com/ig">
+            <span class="visually-hidden">Инстаграм</span>
+            <svg class="socials__logo" width="16" height="16">
+              <use xlink:href="./img/sprite.svg#ig-logo"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://via.placeholder.com/fb">
+            <span class="visually-hidden">Фейсбук</span>
+            <svg class="socials__logo" width="22" height="22">
+              <use xlink:href="./img/sprite.svg#fb-logo"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <p class="page-footer__copyright copyright">
+      <span class="copyright__name">HTML Academy</span>
+      <a href="https://htmlacademy.ru/intensive/htmlcss">
+        <svg class="copyright__icon" width="27" height="34">
+          <use xlink:href="./img/sprite.svg#html-academy-logo"></use>
+        </svg>
+      </a>
+    </p>
+  </footer>
+</body>
 </html>
