@@ -1,0 +1,17 @@
+.hero {
+  font-family: "Oswald Regular", "Arial", sans-serif;
+
+  .hero__title {
+    margin: 27px auto 25px;
+  }
+
+  .hero__description {
+    margin-bottom: 29px;
+    text-transform: uppercase;
+  }
+
+  .hero__button {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
