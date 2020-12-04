@@ -1,0 +1,16 @@
+.nav {
+  .nav__routes {
+    @include reset-list;
+    @include reset-margin-padding;
+  }
+
+  .nav__routes-link {
+    @include reset-links;
+
+    font-family: "Oswald Medium", "Arial", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $black;
+  }
+}
