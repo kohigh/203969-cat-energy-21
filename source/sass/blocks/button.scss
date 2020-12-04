@@ -1,5 +1,5 @@
 .button {
-  @include reset-links;
+  @include default-link;
   background-color: $green;
   color: $white;
   text-transform: uppercase;

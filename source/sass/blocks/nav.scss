@@ -5,12 +5,11 @@
   }
 
   .nav__routes-link {
-    @include reset-links;
+    @include default-link;
 
     font-family: "Oswald Medium", "Arial", sans-serif;
     font-size: 20px;
     line-height: 20px;
-    text-transform: uppercase;
     color: $black;
   }
 }

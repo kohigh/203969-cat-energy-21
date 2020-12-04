@@ -1,0 +1,31 @@
+.programs {
+  .programs__list {
+    @include reset-list;
+    @include reset-margin-padding;
+
+    font-family: "Oswald Regular", "Arial", sans-serif;
+  }
+
+  .programs__item {
+    background-color: $grey-list-item;
+  }
+
+  .programs__title {
+    font-size: 24px;
+    line-height: 37px;
+    text-transform: uppercase;
+  }
+
+  .programs__description {
+    font-family: "Arial", "Oswald Regular", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .programs__link {
+    @include default-link;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
