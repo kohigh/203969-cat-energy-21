@@ -1,4 +1,9 @@
 .range {
+  .range__examples {
+    @include reset-list;
+    @include reset-margin-padding;
+  }
+
   .range__button {
     background-color: inherit;
     font-family: "Oswald Regular", "Arial", sans-serif;
