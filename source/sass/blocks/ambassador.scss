@@ -1,0 +1,34 @@
+.ambassador {
+  background-color: $grey-ambassador;
+  font-family: "Oswald Regular", "Arial", sans-serif;
+
+  .ambassador__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .ambassador__description {
+    font-family: "Arial", "Oswald Regular", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .ambassador__result {
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .ambassador__measure {
+    font-family: "Arial", "Oswald Regular", sans-serif;
+    text-transform: lowercase;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .ambassador__expenses {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
