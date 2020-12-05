@@ -4,6 +4,10 @@
     @include reset-margin-padding;
   }
 
+  .nav__routes-item {
+    height: $nav-item-height;
+  }
+
   .nav__routes-link {
     @include default-link;
 

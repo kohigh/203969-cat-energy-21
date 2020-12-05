@@ -1,6 +1,11 @@
 .footer {
-  .footer__wrapper {
+  .footer__attention-wrapper {
+    height: 114px;
+  }
+
+  .footer__bottom-wrapper {
     background-color: $grey-footer;
+    height: 236px;
   }
 
   .footer__copyright {
