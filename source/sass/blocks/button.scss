@@ -1,0 +1,8 @@
+.button {
+  @include default-link;
+
+  font-family: "Oswald Regular", "Arial", sans-serif;
+  background-color: $green;
+  color: $white;
+  text-transform: uppercase;
+}

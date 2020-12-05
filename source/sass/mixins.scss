@@ -1,0 +1,14 @@
+@mixin reset-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  list-style: none;
+}
+
+@mixin default-link {
+  text-decoration: none;
+  color: $black;
+  text-transform: uppercase;
+}

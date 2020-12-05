@@ -1,0 +1,46 @@
+.form {
+  font-family: "Oswald Regular", "Arial", sans-serif;
+
+  .form__input-wrapper {
+    @include reset-margin-padding;
+    color: $grey-inputs-text;
+    height: 46px;
+  }
+
+  .form__label,
+  .form__input::placeholder,
+  .form__textarea::placeholder {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  &__label--radio {
+    color: $grey-radio-text;
+  }
+
+  .form__programs {
+    @include reset-list;
+    @include reset-margin-padding;
+  }
+
+  .form__legend {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .form__additional-list {
+    @include reset-list;
+    @include reset-margin-padding;
+
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+
+  .form__attention {
+    font-family: "Arial", "Oswald Regular", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
