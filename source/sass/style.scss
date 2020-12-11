@@ -1,12 +1,13 @@
 // Начните писать стили здесь
-@import "fonts";
 @import "variables";
+@import "fonts";
 @import "mixins";
+@import "blocks/page";
+@import "blocks/main";
 @import "blocks/visually-hidden";
 @import "blocks/button";
 @import "blocks/header";
 @import "blocks/nav";
-@import "blocks/main";
 @import "blocks/hero";
 @import "blocks/programs";
 @import "blocks/features";

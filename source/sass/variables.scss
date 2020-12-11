@@ -1,12 +1,30 @@
+//Fonts Begin
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+$font-size-xl: 20px;
+
+$font-bold: 500;
+$font-regular: 400;
+$font-main: "Oswald", "Arial", sans-serif;
+$font-additional: "Arial", sans-serif;
+//Fonts End
+
 //Colors Begin
+//color names from https://chir.ag/
 $black: rgba(0, 0, 0, 1);
 $white: rgba(255, 255, 255, 1);
-$green: rgba(104, 183, 56, 1);
-$grey-list-item: #f2f2f2;
-$grey-ambassador: #eaeaea;
-$grey-footer: rgba(242, 242, 242, 1);
-//Colors End
+$green-apple: rgba(104, 183, 56, 1);
+$grey-gallery: #eaeaea;
+$grey-concrete: rgba(242, 242, 242, 1);
 
-//Sizes Begin
-$nav-item-height: 65px;
-//Sizes End
+$ambassador-background: $grey-gallery;
+$button-background: $green-apple;
+$button-color: $white;
+$footer-background: $grey-concrete;
+$hero-color: $white;
+$link-color: $black;
+$body-color: $black;
+$program-background: $grey-concrete;
+//Colors End

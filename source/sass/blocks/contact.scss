@@ -1,19 +1,24 @@
 .contact {
-  .contact__attention {
-    font-family: "Oswald Regular", "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-  }
+  @include block-padding;
 
-  .contact__address {
-    font-family: "Arial", "Oswald Regular", sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    font-style: normal;
-  }
+  // TODO: For testing. Remove later
+  outline: 2px solid greenyellow;
+  outline-offset: -2px;
+}
 
-  .contact__map {
-    border: none;
-  }
+.contact__attention {
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: $font-size-m;
+  text-transform: uppercase;
+}
+
+.contact__address {
+  font-family: $font-additional;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.contact__map {
+  border: none;
 }

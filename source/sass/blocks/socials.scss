@@ -1,6 +1,4 @@
-.socials {
-  .socials__list {
-    @include reset-list;
-    @include reset-margin-padding;
-  }
+.socials__list {
+  @include reset-list;
+  @include reset-margin-padding;
 }

@@ -1,32 +1,39 @@
 .programs {
-  .programs__list {
-    @include reset-list;
-    @include reset-margin-padding;
+  @include block-padding;
 
-    font-family: "Oswald Regular", "Arial", sans-serif;
-  }
+  padding-top: 22px;
 
-  .programs__item {
-    background-color: $grey-list-item;
-    height: 266px;
-  }
+  // TODO: For testing. Remove later
+  outline: 2px solid darkblue;
+  outline-offset: -2px;
+}
 
-  .programs__title {
-    font-size: 24px;
-    line-height: 37px;
-    text-transform: uppercase;
-  }
+.programs__list {
+  @include reset-list;
+  @include reset-margin-padding;
+}
 
-  .programs__description {
-    font-family: "Arial", "Oswald Regular", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-  }
+.programs__item {
+  background-color: $program-background;
+}
 
-  .programs__link {
-    @include default-link;
+.programs__item:not(:last-child) {
+  margin-bottom: 20px;
+}
 
-    font-size: 16px;
-    line-height: 16px;
-  }
+.programs__title {
+  @include reset-margin-padding;
+
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.programs__link {
+  @include default-link;
+
+  font-family: $font-main;
+  font-size: $font-size-m;
 }

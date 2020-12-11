@@ -1,34 +1,30 @@
 .ambassador {
-  background-color: $grey-ambassador;
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  @include block-padding;
 
-  .ambassador__title {
-    font-size: 36px;
-    line-height: 40px;
-  }
+  background-color: $ambassador-background;
 
-  .ambassador__description {
-    font-family: "Arial", "Oswald Regular", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-  }
+  // TODO: For testing. Remove later
+  outline: 2px solid darkblue;
+  outline-offset: -2px;
+}
 
-  .ambassador__result {
-    text-transform: uppercase;
-    font-size: 24px;
-    line-height: 24px;
-  }
+.ambassador__result {
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
 
-  .ambassador__measure {
-    font-family: "Arial", "Oswald Regular", sans-serif;
-    text-transform: lowercase;
-    font-size: 12px;
-    line-height: 12px;
-  }
+.ambassador__measure {
+  font-family: $font-additional;
+  font-size: $font-size-xs;
+  line-height: 12px;
+  text-transform: lowercase;
+}
 
-  .ambassador__expenses {
-    text-transform: uppercase;
-    font-size: 14px;
-    line-height: 20px;
-  }
+.ambassador__expenses {
+  font-family: $font-main;
+  line-height: 20px;
+  text-transform: uppercase;
 }

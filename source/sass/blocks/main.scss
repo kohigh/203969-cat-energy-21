@@ -1,19 +1,22 @@
-.main {
-  .main__title {
-    font-family: "Oswald Regular", "Arial", sans-serif;
-    font-size: 36px;
-    line-height: 36px;
-  }
+.main__top {
+  @include block-padding;
+}
 
-  .main__hero {
-    margin-bottom: 22px;
-  }
+.main__title {
+  @include reset-margin-padding;
 
-  .main__programs {
-    margin-bottom: 27px;
-  }
+  margin-bottom: 25px;
+  color: inherit;
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 36px;
+  line-height: 36px;
+}
 
-  .main__features {
-    margin-bottom: 42px;
-  }
+.main__description {
+  @include reset-margin-padding;
+
+  margin-bottom: 29px;
+  font-family: $font-main;
+  text-transform: uppercase;
 }

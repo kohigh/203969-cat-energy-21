@@ -1,15 +1,14 @@
-.range {
-  .range__examples {
-    @include reset-list;
-    @include reset-margin-padding;
-  }
+.range__examples {
+  @include reset-list;
+  @include reset-margin-padding;
+}
 
-  .range__button {
-    background-color: inherit;
-    font-family: "Oswald Regular", "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 20px;
-    text-transform: uppercase;
-    border: none;
-  }
+.range__button {
+  background-color: inherit;
+  border: none;
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: $font-size-m;
+  line-height: 20px;
+  text-transform: uppercase;
 }

@@ -1,5 +1,14 @@
 .header {
-  .header__top {
-    height: $nav-item-height;
-  }
+  @include block-padding;
+
+  padding-top: 11px;
+  padding-bottom: 18px;
+
+  // TODO: For testing. Remove later
+  outline: 2px solid grey;
+  outline-offset: -2px;
+}
+
+.header__nav-wrapper {
+  display: none;
 }

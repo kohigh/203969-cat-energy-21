@@ -1,16 +1,15 @@
-.footer {
-  .footer__attention-wrapper {
-    height: 114px;
-  }
+.footer__bottom-wrapper {
+  @include block-padding;
 
-  .footer__bottom-wrapper {
-    background-color: $grey-footer;
-    height: 236px;
-  }
+  padding-top: 39px;
+  background-color: $footer-background;
 
-  .footer__copyright {
-    font-family: "Arial", "Oswald Regular", sans-serif;
-    font-size: 16px;
-    line-height: 18.4px;
-  }
+  // TODO: For testing. Remove later
+  outline: 2px solid darkblue;
+  outline-offset: -2px;
+}
+
+.footer__copyright {
+  font-family: $font-additional;
+  font-size: $font-size-m;
 }

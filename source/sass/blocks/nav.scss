@@ -1,19 +1,13 @@
-.nav {
-  .nav__routes {
-    @include reset-list;
-    @include reset-margin-padding;
-  }
+.nav__routes {
+  @include reset-list;
+  @include reset-margin-padding;
+}
 
-  .nav__routes-item {
-    height: $nav-item-height;
-  }
+.nav__routes-link {
+  @include default-link;
 
-  .nav__routes-link {
-    @include default-link;
-
-    font-family: "Oswald Medium", "Arial", sans-serif;
-    font-size: 20px;
-    line-height: 20px;
-    color: $black;
-  }
+  font-family: $font-main;
+  font-weight: $font-bold;
+  font-size: $font-size-xl;
+  line-height: 20px;
 }

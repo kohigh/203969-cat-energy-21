@@ -1,22 +1,12 @@
 .features {
-  .features__item {
-    height: 60px;
-  }
+  @include block-padding;
 
-  .features__title {
-    font-family: "Oswald Regular", "Arial", sans-serif;
-    font-size: 36px;
-    line-height: 40px;
-  }
+  // TODO: For testing. Remove later
+  outline: 2px solid yellowgreen;
+  outline-offset: -2px;
+}
 
-  .features__list {
-    @include reset-list;
-    @include reset-margin-padding;
-  }
-
-  .features__description {
-    font-family: "Arial", "Oswald Regular", sans-serif;
-    font-size: 14px;
-    line-height: 18px;
-  }
+.features__list {
+  @include reset-list;
+  @include reset-margin-padding;
 }
