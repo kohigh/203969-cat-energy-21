@@ -1,0 +1,24 @@
+.contact {
+  @include block-padding;
+
+  // TODO: For testing. Remove later
+  outline: 2px solid greenyellow;
+  outline-offset: -2px;
+}
+
+.contact__attention {
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: $font-size-m;
+  text-transform: uppercase;
+}
+
+.contact__address {
+  font-family: $font-additional;
+  font-style: normal;
+  line-height: 20px;
+}
+
+.contact__map {
+  border: none;
+}

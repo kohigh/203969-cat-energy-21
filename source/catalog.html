@@ -3,28 +3,31 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="page__body">
   <header class="header">
     <div class="header__top">
-      <a class="header__logo" href="./index.html">
+      <a class="header__logo">
         <!--        TODO: Add logo svg(icon + text) -->
       </a>
       <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
-    <nav class="header__nav nav">
-      <ul class="nav__routes">
-        <li class="nav__routes-item nav__routes-item--active">
-          <a class="nav__routes-link" href="./index.html">Главная</a>
-        </li>
-        <li class="nav__routes-item">
-          <a class="nav__routes-link">Каталог продукции</a>
-        </li>
-        <li class="nav__routes-item">
-          <a class="nav__routes-link" href="./form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header__nav-wrapper">
+      <nav class="nav">
+        <ul class="nav__routes">
+          <li class="nav__routes-item nav__routes-item--active">
+            <a class="nav__routes-link">Главная</a>
+          </li>
+          <li class="nav__routes-item">
+            <a class="nav__routes-link" href="./catalog.html">Каталог продукции</a>
+          </li>
+          <li class="nav__routes-item">
+            <a class="nav__routes-link" href="./form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="main">
     <section class="catalog">

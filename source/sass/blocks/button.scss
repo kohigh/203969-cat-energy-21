@@ -1,0 +1,9 @@
+.button {
+  @include default-link;
+
+  background-color: $button-background;
+  color: $button-color;
+  font-family: $font-main;
+  font-weight: $font-regular;
+  text-transform: uppercase;
+}
