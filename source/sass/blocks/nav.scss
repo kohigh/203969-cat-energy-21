@@ -6,7 +6,6 @@
 .nav__routes-link {
   @include default-link;
 
-  font-family: $font-main;
   font-weight: $font-bold;
   font-size: $font-size-xl;
   line-height: 20px;

@@ -1,0 +1,52 @@
+.additional {
+  @include block-padding;
+
+  // TODO: For testing. Remove later
+  outline: 2px solid darkblue;
+  outline-offset: -2px;
+}
+
+.additional__title {
+  @include reset-margin-padding;
+
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.additional__list {
+  @include reset-list;
+}
+
+.additional__item-title {
+  @include reset-margin-padding;
+
+  color: $additional-item-title;
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: $font-size-m;
+  text-transform: uppercase;
+}
+
+.additional__item-spec {
+  @include reset-margin-padding;
+
+  color: $grey-tundora;
+  font-family: $font-additional;
+  font-weight: $font-regular;
+  font-size: $font-size-s;
+}
+
+.additional__promo {
+  @include block-padding;
+
+  color: $additional__promo-text;
+  font-family: $font-additional;
+  font-size: $font-size-m;
+  // TODO: For testing. Remove later
+  outline: 2px solid yellowgreen;
+  outline-offset: -2px;
+  background-color: yellowgreen;
+}

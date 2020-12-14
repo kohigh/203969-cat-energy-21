@@ -1,5 +1,52 @@
 .catalog {
+  @include block-padding;
+
   // TODO: For testing. Remove later
   outline: 2px solid yellowgreen;
   outline-offset: -2px;
+}
+
+.catalog__item {
+  padding-top: 19px;
+  // TODO: For testing. Remove later
+  outline: 2px solid darkblue;
+  outline-offset: -2px;
+}
+
+.catalog__link-wrapper {
+  @include default-link;
+
+  font-weight: $font-regular;
+}
+
+.catalog__property-key {
+  @include key-value-font;
+}
+
+.catalog__property-value {
+  @include key-value-font;
+}
+
+.catalog__more-title {
+  @include reset-margin-padding;
+
+  color: $catalog-more-title;
+  font-family: $font-main;
+  font-size: $font-size-m;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.catalog__more-description {
+  @include reset-margin-padding;
+
+  color: $catalog-more-description;
+  font-family: $font-additional;
+  font-size: $font-size-xs;
+  line-height: 16px;
+}
+
+.catalog__all {
+  background-color: $catalog-more-button;
+  color: $catalog-more-button-text;
 }

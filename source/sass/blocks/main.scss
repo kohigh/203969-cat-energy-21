@@ -1,0 +1,14 @@
+.main__top {
+  @include block-padding;
+}
+
+.main__title {
+  @include reset-margin-padding;
+
+  margin-bottom: 25px;
+  color: inherit;
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 36px;
+  line-height: 36px;
+}

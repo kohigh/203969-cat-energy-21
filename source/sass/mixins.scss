@@ -14,6 +14,13 @@
 
 @mixin default-link {
   color: $link-color;
+  font-family: $font-main;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@mixin key-value-font {
+  font-weight: $font-regular;
+  font-size: $font-size-xs;
+  line-height: 16px;
 }
