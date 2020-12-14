@@ -3,12 +3,25 @@
   padding: 0;
 }
 
+@mixin block-padding {
+  padding: 0 20px;
+  padding-top: 27px;
+}
+
 @mixin reset-list {
   list-style: none;
 }
 
 @mixin default-link {
+  color: $link-color;
   text-decoration: none;
-  color: $black;
+  text-transform: uppercase;
+}
+
+@mixin form-text {
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
 }

@@ -1,14 +1,25 @@
 .main {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  @include block-padding;
 
-  .main__title {
-    font-size: 36px;
-    line-height: 36px;
-  }
+  outline: 2px solid yellowgreen;
+  outline-offset: -2px;
+}
 
-  .main__description {
-    font-size: 14px;
-    line-height: 18px;
-    text-transform: uppercase;
-  }
+.main__title {
+  @include reset-margin-padding;
+
+  margin-bottom: 25px;
+  color: inherit;
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.main__description {
+  @include reset-margin-padding;
+
+  margin-bottom: 29px;
+  font-family: $font-main;
+  text-transform: uppercase;
 }

@@ -1,9 +1,14 @@
 // Начните писать стили здесь
-@import "fonts";
 @import "variables";
+@import "fonts";
 @import "mixins";
-@import "blocks/button";
-@import "blocks/visually-hidden";
 @import "blocks/page";
 @import "blocks/main";
+@import "blocks/visually-hidden";
+@import "blocks/button";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/footer";
+@import "blocks/contact";
+@import "blocks/socials";
 @import "blocks/form";

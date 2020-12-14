@@ -1,46 +1,47 @@
 .form {
-  font-family: "Oswald Regular", "Arial", sans-serif;
+  font-family: $font-main;
+}
 
-  .form__input-wrapper {
-    @include reset-margin-padding;
-    color: $grey-inputs-text;
-    height: 46px;
-  }
+.form__input-wrapper {
+  @include reset-margin-padding;
 
-  .form__label,
-  .form__input::placeholder,
-  .form__textarea::placeholder {
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-  }
+  color: $input-color;
+}
 
-  &__label--radio {
-    color: $grey-radio-text;
-  }
+.form__label {
+  @include form-text;
+}
 
-  .form__programs {
-    @include reset-list;
-    @include reset-margin-padding;
-  }
+.form__input::placeholder {
+  @include form-text;
+}
 
-  .form__legend {
-    font-size: 24px;
-    line-height: 26px;
-  }
+.form__textarea::placeholder {
+  @include form-text;
+}
 
-  .form__additional-list {
-    @include reset-list;
-    @include reset-margin-padding;
+.form__label--radio {
+  color: $radio-color;
+}
 
-    font-size: 16px;
-    line-height: 18px;
-    text-transform: uppercase;
-  }
+.form__programs {
+  @include reset-list;
+  @include reset-margin-padding;
+}
 
-  .form__attention {
-    font-family: "Arial", "Oswald Regular", sans-serif;
-    font-size: 14px;
-    line-height: 16px;
-  }
+.form__legend {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.form__additional-list {
+  @include reset-list;
+  @include reset-margin-padding;
+  @include form-text;
+}
+
+.form__attention {
+  @include reset-margin-padding;
+
+  font-family: $font-additional;
 }
