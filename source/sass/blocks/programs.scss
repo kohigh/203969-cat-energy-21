@@ -1,0 +1,39 @@
+.programs {
+  @include block-padding;
+
+  padding-top: 22px;
+
+  // TODO: For testing. Remove later
+  outline: 2px solid darkblue;
+  outline-offset: -2px;
+}
+
+.programs__list {
+  @include reset-list;
+  @include reset-margin-padding;
+}
+
+.programs__item {
+  background-color: $program-background;
+}
+
+.programs__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.programs__title {
+  @include reset-margin-padding;
+
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+
+.programs__link {
+  @include default-link;
+
+  font-family: $font-main;
+  font-size: $font-size-m;
+}

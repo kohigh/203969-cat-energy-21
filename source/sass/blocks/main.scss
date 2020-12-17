@@ -5,6 +5,10 @@
   outline-offset: -2px;
 }
 
+.main__top {
+  @include block-padding;
+}
+
 .main__title {
   @include reset-margin-padding;
 

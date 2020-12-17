@@ -1,0 +1,30 @@
+.ambassador {
+  @include block-padding;
+
+  background-color: $ambassador-background;
+
+  // TODO: For testing. Remove later
+  outline: 2px solid darkblue;
+  outline-offset: -2px;
+}
+
+.ambassador__result {
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.ambassador__measure {
+  font-family: $font-additional;
+  font-size: $font-size-xs;
+  line-height: 12px;
+  text-transform: lowercase;
+}
+
+.ambassador__expenses {
+  font-family: $font-main;
+  line-height: 20px;
+  text-transform: uppercase;
+}
