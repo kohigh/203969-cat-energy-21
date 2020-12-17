@@ -1,0 +1,15 @@
+.footer__bottom-wrapper {
+  @include block-padding;
+
+  padding-top: 39px;
+  background-color: $footer-background;
+
+  // TODO: For testing. Remove later
+  outline: 2px solid darkblue;
+  outline-offset: -2px;
+}
+
+.footer__copyright {
+  font-family: $font-additional;
+  font-size: $font-size-m;
+}
