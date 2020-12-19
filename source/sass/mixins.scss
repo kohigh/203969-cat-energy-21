@@ -24,3 +24,11 @@
   font-size: $font-size-xs;
   line-height: 16px;
 }
+
+@mixin form-text {
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}

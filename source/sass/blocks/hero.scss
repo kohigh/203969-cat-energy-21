@@ -1,0 +1,20 @@
+.hero {
+  padding-bottom: 25px;
+  color: $hero-color;
+  font-family: $font-main;
+  font-weight: $font-regular;
+
+  // TODO: For testing. Remove later
+  outline: 2px solid indianred;
+  outline-offset: -2px;
+  background-color: #68b738;
+}
+
+.hero__button {
+  font-size: $font-size-s;
+  line-height: 18px;
+}
+
+.hero__title {
+  margin-bottom: 25px;
+}

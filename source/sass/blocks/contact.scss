@@ -7,6 +7,8 @@
 }
 
 .contact__attention {
+  @include reset-margin-padding;
+
   font-family: $font-main;
   font-weight: $font-regular;
   font-size: $font-size-m;
