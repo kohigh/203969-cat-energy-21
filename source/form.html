@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
   <header class="header">
@@ -30,11 +30,13 @@
     </div>
   </header>
   <main class="main">
-    <h1 class="page__title main__title">Подбор программы</h1>
-    <p class="main__description">
-      Заполните анкету, и мы подберем
-      программу питания для вашего кота
-    </p>
+    <section class="main__top">
+      <h1 class="main__title">Подбор программы</h1>
+      <p class="main__description">
+        Заполните анкету, и мы подберем
+        программу питания для вашего кота
+      </p>
+    </section>
     <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form__cat-info">
           <h3 class="visually-hidden">Личные данные кота</h3>
@@ -70,13 +72,13 @@
         </fieldset>
         <fieldset class="form__contacts">
           <legend class="form__legend">Контактные данные (владельца кота)</legend>
-          <p class="form__contact">
+          <p class="form__input-wrapper">
             <label class="form__label" for="email">E-mail:</label>
-            <input class="form__input" type="email" name="email" id="email" value="kuklachev@gmail.com" required>
+            <input class="form__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com" required>
           </p>
-          <p class="form__contact">
+          <p class="form__input-wrapper">
             <label class="form__label" for="phone">Телефон:</label>
-            <input class="form__input" type="tel" name="phone" id="phone" value="8 (960) 900-60-90" required>
+            <input class="form__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90" required>
           </p>
         </fieldset>
         <fieldset>
@@ -86,7 +88,7 @@
         </fieldset>
         <fieldset>
           <legend class="form__legend">Дополнительно</legend>
-          <ul>
+          <ul class="form__additional-list">
             <li class="form__checkbox-wrapper">
               <input type="text" class="visually-hidden form__checkbox" name="sweetener" id="sweetener">
               <label for="sweetener">Сахарозаменитель</label>
@@ -105,7 +107,7 @@
             </li>
           </ul>
         </fieldset>
-        <button class="form__submit" value="Отправить заявку"></button>
+        <button class="button form__submit">Отправить заявку</button>
         <p class="form__attention">— Обязательные поля</p>
       </form>
   </main>

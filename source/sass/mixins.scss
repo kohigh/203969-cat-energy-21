@@ -17,3 +17,11 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+
+@mixin form-text {
+  font-family: $font-main;
+  font-weight: $font-regular;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}

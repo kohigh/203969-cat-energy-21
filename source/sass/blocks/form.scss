@@ -1,0 +1,47 @@
+.form {
+  font-family: $font-main;
+}
+
+.form__input-wrapper {
+  @include reset-margin-padding;
+
+  color: $input-color;
+}
+
+.form__label {
+  @include form-text;
+}
+
+.form__input::placeholder {
+  @include form-text;
+}
+
+.form__textarea::placeholder {
+  @include form-text;
+}
+
+.form__label--radio {
+  color: $radio-color;
+}
+
+.form__programs {
+  @include reset-list;
+  @include reset-margin-padding;
+}
+
+.form__legend {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.form__additional-list {
+  @include reset-list;
+  @include reset-margin-padding;
+  @include form-text;
+}
+
+.form__attention {
+  @include reset-margin-padding;
+
+  font-family: $font-additional;
+}
