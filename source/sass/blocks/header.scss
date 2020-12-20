@@ -7,8 +7,29 @@
   // TODO: For testing. Remove later
   outline: 2px solid grey;
   outline-offset: -2px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header__top {
+  display: flex;
+}
+
+.header__toggle {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .header__nav-wrapper {
-  display: none;
+  @media (min-width: $mobile-width) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

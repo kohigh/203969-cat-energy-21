@@ -1,6 +1,27 @@
 .nav__routes {
   @include reset-list;
   @include reset-margin-padding;
+
+  display: flex;
+
+  @media (min-width: $mobile-width) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.nav__routes-item {
+  padding-top: 22px;
+  padding-bottom: 24px;
+
+  &:not(:last-child) {
+    @media (min-width: $tablet-width) {
+      margin-right: 33px;
+    }
+  }
 }
 
 .nav__routes-link {
