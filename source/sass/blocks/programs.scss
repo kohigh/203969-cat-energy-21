@@ -11,14 +11,22 @@
 .programs__list {
   @include reset-list;
   @include reset-margin-padding;
+
+  display: grid;
+  grid-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-gap: 80px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .programs__item {
   background-color: $program-background;
-}
-
-.programs__item:not(:last-child) {
-  margin-bottom: 20px;
 }
 
 .programs__title {
