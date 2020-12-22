@@ -1,8 +1,16 @@
 .footer__bottom-wrapper {
   @include block-padding;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   padding-top: 39px;
   background-color: $footer-background;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
 
   // TODO: For testing. Remove later
   outline: 2px solid darkblue;
