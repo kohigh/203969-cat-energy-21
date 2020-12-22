@@ -1,9 +1,24 @@
 .contact {
   @include block-padding;
 
+  display: grid;
+
   // TODO: For testing. Remove later
   outline: 2px solid greenyellow;
   outline-offset: -2px;
+}
+
+.contact__attention-wrapper {
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    z-index: 1;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: $contact-background;
+  }
 }
 
 .contact__attention {
@@ -22,5 +37,11 @@
 }
 
 .contact__map {
+  width: 100%;
   border: none;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 }
