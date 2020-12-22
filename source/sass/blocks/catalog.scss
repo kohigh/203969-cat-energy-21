@@ -1,6 +1,21 @@
 .catalog {
-  @include block-padding;
   @include highlight-block(yellowgreen);
+}
+
+.catalog__list {
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 80px;
+    grid-row-gap: 63px;
+  }
 }
 
 .catalog__item {
