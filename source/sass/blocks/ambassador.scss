@@ -1,11 +1,33 @@
 .ambassador {
   @include block-padding;
 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background-color: $ambassador-background;
 
   // TODO: For testing. Remove later
   outline: 2px solid darkblue;
   outline-offset: -2px;
+}
+
+.ambassador__top {
+  grid-column: 1/3;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+  }
+}
+
+.ambassador__results {
+  grid-column: 1/3;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+  }
 }
 
 .ambassador__result {
@@ -16,6 +38,22 @@
   text-transform: uppercase;
 }
 
+.ambassador__expenses {
+  grid-column: 1/3;
+
+  font-family: $font-main;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 2/3;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+  }
+}
+
 .ambassador__measure {
   font-family: $font-additional;
   font-size: $font-size-xs;
@@ -23,8 +61,11 @@
   text-transform: lowercase;
 }
 
-.ambassador__expenses {
-  font-family: $font-main;
-  line-height: 20px;
-  text-transform: uppercase;
+.ambassador__range {
+  grid-column: 1/3;
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
 }
