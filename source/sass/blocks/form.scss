@@ -1,4 +1,5 @@
 .form {
+  display: grid;
   font-family: $font-main;
 }
 
@@ -24,20 +25,81 @@
   color: $radio-color;
 }
 
-.form__programs {
+.form__cat-info {
+  @include highlight-block(yellowgreen);
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+  }
+}
+
+.form__program {
+  @include highlight-block(blue);
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/3;
+  }
+}
+
+.form__programs-list {
   @include reset-list;
   @include reset-margin-padding;
 }
 
-.form__legend {
-  font-size: 24px;
-  line-height: 26px;
+.form__contacts {
+  @include highlight-block(#ed8787);
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/3;
+  }
+}
+
+.form__comment {
+  @include highlight-block(yellowgreen);
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/3;
+  }
+}
+
+.form__additional {
+  @include highlight-block(blue);
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/3;
+  }
 }
 
 .form__additional-list {
   @include reset-list;
   @include reset-margin-padding;
   @include form-text;
+
+  display: grid;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 124px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 104px;
+  }
+}
+
+.form__bottom {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.form__legend {
+  font-size: 24px;
+  line-height: 26px;
 }
 
 .form__attention {
