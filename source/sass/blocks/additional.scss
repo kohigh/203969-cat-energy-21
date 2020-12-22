@@ -1,9 +1,6 @@
 .additional {
   @include block-padding;
-
-  // TODO: For testing. Remove later
-  outline: 2px solid darkblue;
-  outline-offset: -2px;
+  @include highlight-block(darkblue);
 }
 
 .additional__title {
@@ -41,12 +38,11 @@
 
 .additional__promo {
   @include block-padding;
+  @include highlight-block(yellowgreen);
 
   color: $additional__promo-text;
   font-family: $font-additional;
   font-size: $font-size-m;
   // TODO: For testing. Remove later
-  outline: 2px solid yellowgreen;
-  outline-offset: -2px;
   background-color: yellowgreen;
 }

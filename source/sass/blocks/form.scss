@@ -34,7 +34,7 @@
 }
 
 .form__program {
-  @include highlight-block(blue);
+  @include highlight-block(darkblue);
 
   @media (min-width: $desktop-width) {
     grid-column: 2/3;
@@ -63,7 +63,7 @@
 }
 
 .form__additional {
-  @include highlight-block(blue);
+  @include highlight-block(darkblue);
 
   @media (min-width: $desktop-width) {
     grid-column: 1/3;

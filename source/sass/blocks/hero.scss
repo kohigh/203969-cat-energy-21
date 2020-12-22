@@ -1,4 +1,6 @@
 .hero {
+  @include highlight-block(indianred);
+
   display: grid;
   padding-bottom: 25px;
   color: $hero-color;
@@ -6,8 +8,6 @@
   font-weight: $font-regular;
 
   // TODO: For testing. Remove later
-  outline: 2px solid indianred;
-  outline-offset: -2px;
   background-color: #68b738;
 }
 

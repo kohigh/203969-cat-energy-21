@@ -1,9 +1,6 @@
 .features {
   @include block-padding;
-
-  // TODO: For testing. Remove later
-  outline: 2px solid yellowgreen;
-  outline-offset: -2px;
+  @include highlight-block(yellowgreen);
 }
 
 .features__list {

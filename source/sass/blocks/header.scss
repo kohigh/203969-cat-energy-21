@@ -1,12 +1,9 @@
 .header {
   @include block-padding;
+  @include highlight-block(grey);
 
   padding-top: 11px;
   padding-bottom: 18px;
-
-  // TODO: For testing. Remove later
-  outline: 2px solid grey;
-  outline-offset: -2px;
 
   @media (min-width: $tablet-width) {
     display: flex;

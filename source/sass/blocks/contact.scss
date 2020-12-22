@@ -1,11 +1,8 @@
 .contact {
   @include block-padding;
+  @include highlight-block(yellowgreen);
 
   display: grid;
-
-  // TODO: For testing. Remove later
-  outline: 2px solid greenyellow;
-  outline-offset: -2px;
 }
 
 .contact__attention-wrapper {

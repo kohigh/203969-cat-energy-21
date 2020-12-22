@@ -1,5 +1,6 @@
 .footer__bottom-wrapper {
   @include block-padding;
+  @include highlight-block(darkblue);
 
   display: flex;
   flex-direction: column;
@@ -11,10 +12,6 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
   }
-
-  // TODO: For testing. Remove later
-  outline: 2px solid darkblue;
-  outline-offset: -2px;
 }
 
 .footer__copyright {

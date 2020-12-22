@@ -1,12 +1,9 @@
 .ambassador {
   @include block-padding;
+  @include highlight-block(darkblue);
 
   display: grid;
   background-color: $ambassador-background;
-
-  // TODO: For testing. Remove later
-  outline: 2px solid darkblue;
-  outline-offset: -2px;
 }
 
 .ambassador__top {
