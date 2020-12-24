@@ -75,9 +75,8 @@
   @include reset-margin-padding;
   @include form-text;
 
-  display: grid;
-
   @media (min-width: $tablet-width) {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 124px;
   }

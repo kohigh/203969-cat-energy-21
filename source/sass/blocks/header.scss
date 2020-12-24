@@ -22,11 +22,13 @@
 }
 
 .header__nav-wrapper {
-  @media (min-width: $mobile-width) {
-    display: none;
-  }
+  display: none;
+}
 
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
+.header--no-js .header__nav-wrapper {
+  display: block;
+}
+
+.header--opened .header__nav-wrapper {
+  display: block;
 }

@@ -4,9 +4,8 @@
 }
 
 .additional__wrapper {
-  display: grid;
-
   @media (min-width: $desktop-width) {
+    display: grid;
     grid-template-columns: 3fr 1fr;
     grid-column-gap: 79px;
   }
@@ -27,9 +26,8 @@
 }
 
 .additional__item {
-  display: grid;
-
   @media (min-width: $tablet-width) {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
 }
