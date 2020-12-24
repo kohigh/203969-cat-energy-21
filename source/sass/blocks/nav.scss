@@ -1,13 +1,35 @@
 .nav__routes {
   @include reset-list;
   @include reset-margin-padding;
+
+  @media (min-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.nav__routes-item {
+  padding-top: 22px;
+  padding-bottom: 14px;
+
+  &:not(:last-child) {
+    @media (min-width: $tablet-width) {
+      margin-right: 33px;
+    }
+  }
 }
 
 .nav__routes-link {
   @include default-link;
 
+  display: inline-block;
   font-family: $font-main;
   font-weight: $font-bold;
   font-size: $font-size-xl;
   line-height: 20px;
+  padding-bottom: 10px;
 }

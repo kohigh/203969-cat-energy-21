@@ -2,11 +2,12 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-  <header class="header">
+  <header class="header header--no-js">
     <div class="header__top">
       <a class="header__logo">
         <!--        TODO: Add logo svg(icon + text) -->
@@ -17,10 +18,10 @@
       <nav class="nav">
         <ul class="nav__routes">
           <li class="nav__routes-item nav__routes-item--active">
-            <a class="nav__routes-link">Главная</a>
+            <a class="nav__routes-link" href="./index.html">Главная</a>
           </li>
           <li class="nav__routes-item">
-            <a class="nav__routes-link" href="./catalog.html">Каталог продукции</a>
+            <a class="nav__routes-link">Каталог продукции</a>
           </li>
           <li class="nav__routes-item">
             <a class="nav__routes-link" href="./form.html">Подбор программы</a>
@@ -198,41 +199,43 @@
     </section>
     <section class="additional">
       <h2 class="additional__title">Дополнительные товары</h2>
-      <ul class="additional__list">
-        <li class="additional__item">
-          <h3 class="additional__item-title">Сахарозаменитель</h3>
-          <p class="additional__item-spec">1 упаковка (100 г)</p>
-          <p class="additional__item-spec">200 р</p>
-          <a class="button" href="./form.html">Заказать</a>
-        </li>
-        <li class="additional__item">
-          <h3 class="additional__item-title">Питьевая вода</h3>
-          <p class="additional__item-spec">5 литров</p>
-          <p class="additional__item-spec">50 р</p>
-          <a class="button" href="./form.html">Заказать</a>
-        </li>
-        <li class="additional__item">
-          <h3 class="additional__item-title">Молоко</h3>
-          <p class="additional__item-spec">1 литр</p>
-          <p class="additional__item-spec">100 р</p>
-          <a class="button" href="./form.html">Заказать</a>
-        </li>
-        <li class="additional__item">
-          <h3 class="additional__item-title">Витамины</h3>
-          <p class="additional__item-spec">1 упаковка (30г)</p>
-          <p class="additional__item-spec">300 р</p>
-          <a class="button" href="./form.html">Заказать</a>
-        </li>
-      </ul>
-      <div class="additional__promo">
-        <p class="additional__promo-text">Закажите все и получите чехол для кота в подарок!</p>
+      <div class="additional__wrapper">
+        <ul class="additional__list">
+          <li class="additional__item">
+            <h3 class="additional__item-title">Сахарозаменитель</h3>
+            <p class="additional__item-spec">1 упаковка (100 г)</p>
+            <p class="additional__item-spec">200 р</p>
+            <a class="additional__button button" href="./form.html">Заказать</a>
+          </li>
+          <li class="additional__item">
+            <h3 class="additional__item-title">Питьевая вода</h3>
+            <p class="additional__item-spec">5 литров</p>
+            <p class="additional__item-spec">50 р</p>
+            <a class="additional__button button" href="./form.html">Заказать</a>
+          </li>
+          <li class="additional__item">
+            <h3 class="additional__item-title">Молоко</h3>
+            <p class="additional__item-spec">1 литр</p>
+            <p class="additional__item-spec">100 р</p>
+            <a class="additional__button button" href="./form.html">Заказать</a>
+          </li>
+          <li class="additional__item">
+            <h3 class="additional__item-title">Витамины</h3>
+            <p class="additional__item-spec">1 упаковка (30г)</p>
+            <p class="additional__item-spec">300 р</p>
+            <a class="additional__button button" href="./form.html">Заказать</a>
+          </li>
+        </ul>
+        <div class="additional__promo">
+          <p class="additional__promo-text">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
       </div>
     </section>
   </main>
   <footer class="footer">
     <section class="footer__contact contact">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <div class="footer__attention-wrapper">
+      <div class="contact__attention-wrapper">
         <p class="contact__attention">Приглашаем к сотрудничеству дилеров!</p>
         <address class="contact__address">
           ул. Большая

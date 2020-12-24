@@ -2,11 +2,12 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-  <header class="header">
+  <header class="header header--no-js">
     <div class="header__top">
       <a class="header__logo">
         <!--        TODO: Add logo svg(icon + text) -->
@@ -31,10 +32,10 @@
   </header>
   <main class="main">
     <section class="main__top hero">
-      <h1 class="main__title">Функциональное питание для котов</h1>
-      <p class="main__description">Занялся собой? Займись котом!</p>
+      <h1 class="main__title hero__title">Функциональное питание для котов</h1>
+      <p class="main__description hero__description">Занялся собой? Займись котом!</p>
       <img class="hero__overlay" width="280" height="270" src="https://via.placeholder.com/280x270"
-        alt="Банка питания «CAT ENERGY» PRO 0% Natural с курицей 500 грамм">
+        alt="«CAT ENERGY» PRO 0% Natural с курицей 500 грамм">
       <a class="hero__button button" href="./form.html">Подобрать программу</a>
     </section>
     <section class="programs">
@@ -59,43 +60,45 @@
       </ul>
     </section>
     <section class="main__features features">
-      <h2 class="page__title">Как это работает</h2>
+      <h2 class="main__title">Как это работает</h2>
       <ul class="features__list">
         <li class="features__item features__item--healthy">
-          <p>
+          <p class="features__description">
             Функциональное питание
             содержит только полезные
             питательные вещества.
           </p>
         </li>
         <li class="features__item features__item--flexible">
-          <p>
+          <p class="features__description">
             Выпускается в виде порошка,
             который нужно лишь залить
             кипятком и готово.
           </p>
         </li>
         <li class="features__item features__item--nutritious">
-          <p>
+          <p class="features__description">
             Замените один-два приема
             обычной еды на наше
             функциональное питание.
           </p>
         </li>
         <li class="features__item features__item--effective">
-          <p>
+          <p class="features__description">
             Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
           </p>
         </li>
       </ul>
     </section>
     <section class="ambassador">
-      <h2 class="page__title">Живой пример</h2>
-      <p>
-        Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-        Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
-        по-прежнему спит по 16 часов в день.
-      </p>
+      <div class="ambassador__top">
+        <h2 class="main__title">Живой пример</h2>
+        <p>
+          Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
+          по-прежнему спит по 16 часов в день.
+        </p>
+      </div>
       <dl class="ambassador__results">
         <dt class="ambassador__result">
           5 кг
@@ -134,7 +137,7 @@
   <footer class="footer">
     <section class="footer__contact contact">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <div class="footer__attention-wrapper">
+      <div class="contact__attention-wrapper">
         <p class="contact__attention">Приглашаем к сотрудничеству дилеров!</p>
         <address class="contact__address">
           ул. Большая

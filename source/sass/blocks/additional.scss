@@ -1,9 +1,14 @@
 .additional {
   @include block-padding;
+  @include highlight-block(darkblue);
+}
 
-  // TODO: For testing. Remove later
-  outline: 2px solid darkblue;
-  outline-offset: -2px;
+.additional__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 79px;
+  }
 }
 
 .additional__title {
@@ -20,6 +25,13 @@
   @include reset-list;
 }
 
+.additional__item {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .additional__item-title {
   @include reset-margin-padding;
 
@@ -28,6 +40,14 @@
   font-weight: $font-regular;
   font-size: $font-size-m;
   text-transform: uppercase;
+
+  @media (min-width: $mobile-width) {
+    grid-column: span 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: span 1;
+  }
 }
 
 .additional__item-spec {
@@ -37,16 +57,32 @@
   font-family: $font-additional;
   font-weight: $font-regular;
   font-size: $font-size-s;
+
+  @media (min-width: $desktop-width) {
+    grid-column: span 1;
+  }
+}
+
+.additional__button {
+  @media (min-width: $mobile-width) {
+    grid-column: span 2;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-column: span 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: span 1;
+  }
 }
 
 .additional__promo {
-  @include block-padding;
+  @include highlight-block(yellowgreen);
 
   color: $additional__promo-text;
   font-family: $font-additional;
   font-size: $font-size-m;
   // TODO: For testing. Remove later
-  outline: 2px solid yellowgreen;
-  outline-offset: -2px;
   background-color: yellowgreen;
 }

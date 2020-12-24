@@ -11,6 +11,12 @@ $font-main: "Oswald", "Arial", sans-serif;
 $font-additional: "Arial", sans-serif;
 //Fonts End
 
+//Devices Begin
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+//Devices End
+
 //Colors Begin
 //color names from https://chir.ag/
 $black: rgba(0, 0, 0, 1);
@@ -40,4 +46,5 @@ $catalog-more-title: $grey-cod;
 $catalog-more-description: $grey-tundora;
 $additional-item-title: $grey-mine-shaft;
 $additional__promo-text: $white;
+$contact-background: $white;
 //Colors End

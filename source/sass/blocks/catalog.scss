@@ -1,16 +1,25 @@
 .catalog {
-  @include block-padding;
+  @include highlight-block(yellowgreen);
+}
 
-  // TODO: For testing. Remove later
-  outline: 2px solid yellowgreen;
-  outline-offset: -2px;
+.catalog__list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 59px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 80px;
+    grid-row-gap: 63px;
+  }
 }
 
 .catalog__item {
+  @include highlight-block(darkblue);
   padding-top: 19px;
-  // TODO: For testing. Remove later
-  outline: 2px solid darkblue;
-  outline-offset: -2px;
 }
 
 .catalog__link-wrapper {

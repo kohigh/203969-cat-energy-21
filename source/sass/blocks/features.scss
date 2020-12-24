@@ -1,12 +1,30 @@
 .features {
   @include block-padding;
-
-  // TODO: For testing. Remove later
-  outline: 2px solid yellowgreen;
-  outline-offset: -2px;
+  @include highlight-block(yellowgreen);
 }
 
 .features__list {
   @include reset-list;
+  @include reset-margin-padding;
+
+  display: grid;
+  grid-row-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-row-gap: 37px;
+    grid-column-gap: 153px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-row-gap: 37px;
+    grid-column-gap: 94px;
+  }
+}
+
+.features__description {
   @include reset-margin-padding;
 }

@@ -1,20 +1,53 @@
 .hero {
+  @include highlight-block(indianred);
+
+  display: grid;
   padding-bottom: 25px;
   color: $hero-color;
   font-family: $font-main;
   font-weight: $font-regular;
 
   // TODO: For testing. Remove later
-  outline: 2px solid indianred;
-  outline-offset: -2px;
   background-color: #68b738;
 }
 
-.hero__button {
-  font-size: $font-size-s;
-  line-height: 18px;
+.hero__overlay {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
 }
 
 .hero__title {
-  margin-bottom: 25px;
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+  }
+}
+
+.hero__description {
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+  }
+}
+
+.hero__button {
+  margin-right: auto;
+  margin-bottom: auto;
+
+  font-size: $font-size-s;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+  }
 }
