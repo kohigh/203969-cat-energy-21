@@ -13,9 +13,14 @@
 
 .header__top {
   display: flex;
+  position: relative;
 }
 
 .header__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+
   @media (min-width: $tablet-width) {
     display: none;
   }
