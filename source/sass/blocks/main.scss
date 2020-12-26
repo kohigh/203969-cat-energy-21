@@ -1,16 +1,11 @@
 .main {
-  @include block-padding;
   @include highlight-block(yellowgreen);
-}
-
-.main__top {
-  @include block-padding;
 }
 
 .main__title {
   @include reset-margin-padding;
 
-  margin-bottom: 25px;
+  margin-bottom: 23px;
   color: inherit;
   font-family: $font-main;
   font-weight: $font-regular;
@@ -21,7 +16,7 @@
 .main__description {
   @include reset-margin-padding;
 
-  margin-bottom: 29px;
+  margin-bottom: 27px;
   font-family: $font-main;
   text-transform: uppercase;
 }
