@@ -14,19 +14,31 @@
 
 .nav__routes-item {
   padding-top: 22px;
-  padding-bottom: 14px;
+  padding-bottom: 13px;
+  border: 1px solid $nav-border;
+  border-right: none;
+  border-left: none;
 
   &:not(:last-child) {
     @media (min-width: $tablet-width) {
       margin-right: 33px;
     }
   }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  & + & {
+    border-top: 0;
+  }
 }
 
 .nav__routes-link {
   @include default-link;
 
-  display: inline-block;
+  display: block;
+  text-align: center;
   font-family: $font-main;
   font-weight: $font-bold;
   font-size: $font-size-xl;

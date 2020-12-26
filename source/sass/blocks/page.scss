@@ -1,4 +1,6 @@
 .page__body {
+  @include reset-margin-padding;
+
   color: $body-color;
   font-family: $font-additional;
   font-weight: $font-regular;
