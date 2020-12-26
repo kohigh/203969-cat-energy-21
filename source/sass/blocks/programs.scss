@@ -22,35 +22,34 @@
 .programs__item {
   background-color: $program-background;
   padding: 0 20px;
-  padding-top: 22px;
+  padding-top: 18px;
   padding-bottom: 18px;
-}
-
-.programs__item-cover {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin-left: 2px;
-  margin-right: 19px;
-  border-radius: 50%;
-  background-color: $programs-cover;
-}
-
-.programs__item-top {
-  display: flex;
-  align-items: center;
-  padding-bottom: 21px;
 }
 
 .programs__item-title {
   @include reset-margin-padding;
 
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 71px;
+  margin-bottom: 19px;
   font-family: $font-main;
   font-weight: $font-regular;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $green-apple;
+  }
 }
 
 .programs__item-link {
@@ -64,11 +63,12 @@
   @include reset-margin-padding;
   position: relative;
 
-  margin-bottom: 42px;
+  padding-bottom: 24px;
+  margin-bottom: 17px;
 
   &::after {
     content: "";
-    bottom: -24px;
+    bottom: 0;
     left: 0;
     position: absolute;
     width: 100%;
