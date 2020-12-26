@@ -1,7 +1,5 @@
 .programs {
   @include block-padding;
-  @include highlight-block(darkblue);
-  padding-top: 22px;
 }
 
 .programs__list {
@@ -9,7 +7,7 @@
   @include reset-margin-padding;
 
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 23px;
 
   @media (min-width: $tablet-width) {
     grid-gap: 30px;
@@ -23,9 +21,28 @@
 
 .programs__item {
   background-color: $program-background;
+  padding: 0 20px;
+  padding-top: 22px;
+  padding-bottom: 18px;
 }
 
-.programs__title {
+.programs__item-cover {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-left: 2px;
+  margin-right: 19px;
+  border-radius: 50%;
+  background-color: $programs-cover;
+}
+
+.programs__item-top {
+  display: flex;
+  align-items: center;
+  padding-bottom: 21px;
+}
+
+.programs__item-title {
   @include reset-margin-padding;
 
   font-family: $font-main;
@@ -33,11 +50,29 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  text-align: center;
 }
 
-.programs__link {
+.programs__item-link {
   @include default-link;
 
   font-family: $font-main;
   font-size: $font-size-m;
+}
+
+.programs__item-description {
+  @include reset-margin-padding;
+  position: relative;
+
+  margin-bottom: 42px;
+
+  &::after {
+    content: "";
+    bottom: -24px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $programs-description-line;
+  }
 }

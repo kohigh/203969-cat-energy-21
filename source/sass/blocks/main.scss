@@ -1,7 +1,3 @@
-.main {
-  @include highlight-block(yellowgreen);
-}
-
 .main__title {
   @include reset-margin-padding;
 
