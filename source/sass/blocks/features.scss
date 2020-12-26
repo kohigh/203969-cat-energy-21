@@ -1,6 +1,12 @@
 .features {
   @include block-padding;
   @include highlight-block(yellowgreen);
+
+  padding-top: 30px;
+}
+
+.features__title {
+  margin-bottom: 42px;
 }
 
 .features__list {
@@ -8,7 +14,7 @@
   @include reset-margin-padding;
 
   display: grid;
-  grid-row-gap: 20px;
+  grid-row-gap: 26px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: repeat(2, 1fr);
@@ -25,6 +31,30 @@
   }
 }
 
+.features__item {
+  display: flex;
+}
+
+.features__cover {
+  width: 60px;
+  height: 60px;
+  background-color: $features-cover;
+  margin-right: 20px;
+}
+
 .features__description {
   @include reset-margin-padding;
+  position: relative;
+
+  padding-left: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $green-apple;
+  }
 }
