@@ -1,12 +1,22 @@
 .ambassador {
-  @include block-padding;
   @include highlight-block(darkblue);
 
   display: grid;
+  padding-top: 28px;
   background-color: $ambassador-background;
 }
 
+.ambassador__title {
+  margin-bottom: 35px;
+}
+
+.ambassador__description {
+  @include reset-margin-padding;
+}
+
 .ambassador__top {
+  @include block-padding;
+
   @media (min-width: $tablet-width) {
     grid-column: 1/3;
   }
@@ -18,6 +28,9 @@
 }
 
 .ambassador__results {
+  @include reset-margin-padding;
+  @include block-padding;
+
   @media (min-width: $tablet-width) {
     grid-column: 1/2;
   }
@@ -32,6 +45,8 @@
 }
 
 .ambassador__expenses {
+  @include block-padding;
+
   font-family: $font-main;
   line-height: 20px;
   text-transform: uppercase;
