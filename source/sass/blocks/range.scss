@@ -1,9 +1,53 @@
-.range__examples {
-  @include reset-list;
+.range__img-container {
   @include reset-margin-padding;
+
+  position: relative;
+  margin: 0 auto 33px;
+  width: $ambassador-img-mobile;
+  height: 232px;
+}
+
+.range__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: $ambassador-img-mobile 100%;
+
+  &--foreground {
+    background-image: url("https://via.placeholder.com/311x232");
+  }
+
+  &--background {
+    background-image: url("https://via.placeholder.com/311x232");
+  }
+}
+
+.range__scale {
+  @include reset-margin-padding;
+
+  margin-left: 62px;
+  margin-right: 57px;
+  display: flex;
+  align-items: center;
+}
+
+.range__bar {
+  margin: 0 13px;
+  width: 100%;
+  height: 10px;
+  background-color: #68b738;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .range__button {
+  @include reset-margin-padding;
+
+  padding: 2px;
   background-color: inherit;
   border: none;
   font-family: $font-main;
@@ -11,4 +55,16 @@
   font-size: $font-size-m;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+.range__input-label {
+  @media (min-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.range__input {
+  @media (min-width: $mobile-width) {
+    display: none;
+  }
 }

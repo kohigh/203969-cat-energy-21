@@ -1,6 +1,14 @@
+//TODO: Refactor
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 .page__body {
   @include reset-margin-padding;
 
+  box-sizing: border-box;
   color: $body-color;
   font-family: $font-additional;
   font-weight: $font-regular;
