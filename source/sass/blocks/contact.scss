@@ -1,11 +1,14 @@
 .contact {
-  @include block-padding;
-  @include highlight-block(yellowgreen);
-
   display: grid;
 }
 
 .contact__attention-wrapper {
+  @include block-padding;
+
+  display: flex;
+  padding-top: 28px;
+  padding-bottom: 26px;
+
   @media (min-width: $desktop-width) {
     grid-row: 1/2;
     grid-column: 1/2;
@@ -21,9 +24,11 @@
 .contact__attention {
   @include reset-margin-padding;
 
+  margin-right: 18px;
   font-family: $font-main;
   font-weight: $font-regular;
   font-size: $font-size-m;
+  line-height: 20px;
   text-transform: uppercase;
 }
 
