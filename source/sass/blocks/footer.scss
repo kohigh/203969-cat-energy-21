@@ -1,12 +1,10 @@
 .footer__bottom-wrapper {
   @include block-padding;
-  @include highlight-block(darkblue);
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  padding-top: 39px;
   background-color: $footer-background;
 
   @media (min-width: $tablet-width) {
@@ -14,7 +12,27 @@
   }
 }
 
+.footer__logo {
+  padding-top: 39px;
+  padding-bottom: 27px;
+  text-align: center;
+}
+
+.footer__socials {
+  padding-top: 21px;
+  padding-bottom: 15px;
+  border: 1px solid $footer-hr;
+  border-right: none;
+  border-left: none;
+}
+
 .footer__copyright {
+  @include reset-margin-padding;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
   font-family: $font-additional;
   font-size: $font-size-m;
 }

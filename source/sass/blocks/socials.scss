@@ -1,4 +1,21 @@
 .socials__list {
   @include reset-list;
   @include reset-margin-padding;
+
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.socials__item {
+  margin-right: 38px;
+
+  & + & {
+    margin-right: 34px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
