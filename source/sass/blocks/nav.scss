@@ -13,11 +13,15 @@
 }
 
 .nav__routes-item {
-  padding-top: 22px;
-  padding-bottom: 13px;
+  padding: 21px 0;
   border: 1px solid $nav-border;
   border-right: none;
   border-left: none;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 
   &:not(:last-child) {
     @media (min-width: $tablet-width) {
@@ -37,11 +41,20 @@
 .nav__routes-link {
   @include default-link;
 
-  display: block;
-  text-align: center;
+  display: inline-block;
   font-family: $font-main;
   font-weight: $font-bold;
   font-size: $font-size-xl;
   line-height: 20px;
-  padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-l;
+    line-height: 22px;
+    letter-spacing: -0.4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: $font-size-xl;
+    line-height: 30px;
+  }
 }

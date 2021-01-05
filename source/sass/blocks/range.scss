@@ -1,10 +1,26 @@
+.range {
+  display: grid;
+  padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+  }
+}
+
 .range__img-container {
   @include reset-margin-padding;
 
+  grid-column: 1;
+  grid-row: 1;
   position: relative;
-  margin: 0 auto 33px;
-  width: $ambassador-img-mobile;
+  margin: 0 auto 60px;
+  width: $ambassador-width-mobile;
   height: 232px;
+
+  @media (min-width: $tablet-width) {
+    width: $ambassador-width-tablet;
+    height: 620px;
+  }
 }
 
 .range__img {
@@ -13,41 +29,79 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: $ambassador-img-mobile 100%;
+  background-size: $ambassador-width-mobile 100%;
+
+  @media (min-width: $tablet-width) {
+    background-size: $ambassador-width-tablet 100%;
+  }
 
   &--foreground {
-    background-image: url("https://via.placeholder.com/311x232");
+    background-image: url("../../img/range-before.png");
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../../img/cat-fat.png");
+      width: 50%;
+    }
   }
 
   &--background {
-    background-image: url("https://via.placeholder.com/311x232");
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      background-image: url("../../img/cat-skinny.png");
+    }
   }
 }
 
 .range__scale {
   @include reset-margin-padding;
 
-  margin-left: 62px;
-  margin-right: 57px;
+  z-index: 1;
+  grid-column: 1;
+  grid-row: 1;
+  margin: auto 55px 0;
   display: flex;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 600px;
+    margin: auto auto 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: auto 25px 99px;
+  }
 }
 
 .range__bar {
-  margin: 0 13px;
+  margin-right: 15px;
+  position: relative;
   width: 100%;
-  height: 10px;
-  background-color: #68b738;
+  height: 14px;
+  background-color: $range-background;
+  border: 1px solid $range-border;
+  border-radius: 6px;
 
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+.range__progress {
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 43%;
+  height: 6px;
+  background-color: $range-progress;
+  border-radius: 6px;
+}
+
 .range__button {
   @include reset-margin-padding;
 
-  padding: 2px;
+  padding: 6px;
   background-color: inherit;
   border: none;
   font-family: $font-main;
@@ -55,16 +109,49 @@
   font-size: $font-size-m;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px;
+    font-size: $font-size-xl;
+    line-height: 30px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
 }
 
 .range__input-label {
-  @media (min-width: $mobile-width) {
-    display: none;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
 
 .range__input {
-  @media (min-width: $mobile-width) {
-    display: none;
-  }
+  margin-right: 15px;
+  width: 428px;
+  height: 6px;
+  background-color: $range-scale;
+}
+
+.range__input[type="range"]::-webkit-slider-runnable-track {
+  background: $range-scale;
+  border-radius: 6px;
+  height: 6px;
+}
+
+.range__input[type="range"] {
+  appearance: none;
+}
+
+.range__input[type="range"]::-webkit-slider-thumb {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  background: $range-toggle;
+  cursor: pointer;
+  appearance: none;
+  margin-top: -14px;
 }

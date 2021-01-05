@@ -7,6 +7,11 @@
   font-weight: $font-regular;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .main__description {
@@ -18,5 +23,13 @@
 }
 
 .main__features {
-  margin-bottom: 47px;
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 16px;
+  }
 }
