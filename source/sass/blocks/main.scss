@@ -1,7 +1,19 @@
+.main__top {
+  padding: 28px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 33px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 58px 109px;
+  }
+}
+
 .main__title {
   @include reset-margin-padding;
 
-  margin-bottom: 23px;
+  margin-bottom: 37px;
   color: inherit;
   font-family: $font-main;
   font-weight: $font-regular;
@@ -9,6 +21,7 @@
   line-height: 36px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -17,9 +30,13 @@
 .main__description {
   @include reset-margin-padding;
 
-  margin-bottom: 27px;
   font-family: $font-main;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-xl;
+    line-height: 30px;
+  }
 }
 
 .main__features {

@@ -41,6 +41,11 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-xl;
+    line-height: 30px;
+  }
 }
 
 // TODO: For testing. Remove later

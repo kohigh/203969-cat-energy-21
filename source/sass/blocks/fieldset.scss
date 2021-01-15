@@ -1,0 +1,48 @@
+.fieldset__inner {
+  @include reset-margin-padding;
+
+  padding: 10px 20px;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 10px 38px;
+  }
+
+  &--cat-info {
+    grid-area: cat-info;
+  }
+
+  &--program {
+    grid-area: program;
+  }
+
+  &--contact {
+    grid-area: contact;
+  }
+
+  &--comment {
+    grid-area: comment;
+  }
+
+  &--additional {
+    grid-area: additional;
+  }
+}
+
+.fieldset__top {
+  margin-bottom: 20px;
+  padding: 13px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 7px 69px;
+    margin-bottom: 69px;
+  }
+}
