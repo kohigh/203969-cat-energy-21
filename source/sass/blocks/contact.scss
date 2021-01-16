@@ -29,12 +29,21 @@
     z-index: 1;
     background-color: $contact-background;
   }
+
+  &--more-space {
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 93px;
+    }
+  }
 }
 
 .contact__attention {
   @include reset-margin-padding;
 
-  margin-right: 18px;
   font-family: $font-main;
   font-weight: $font-regular;
   font-size: $font-size-m;

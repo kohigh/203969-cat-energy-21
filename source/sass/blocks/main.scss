@@ -1,19 +1,33 @@
 .main__top {
+  display: grid;
+  row-gap: 37px;
   padding: 28px 20px;
 
   @media (min-width: $tablet-width) {
+    row-gap: 54px;
     padding: 33px 70px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 58px 109px;
+    padding: 60px 110px;
+  }
+
+  &--space-after {
+    margin-bottom: 11px;
+
+    @media (min-width: $tablet-width) {
+      padding: 33px 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 60px 110px;
+    }
   }
 }
 
 .main__title {
   @include reset-margin-padding;
 
-  margin-bottom: 37px;
   color: inherit;
   font-family: $font-main;
   font-weight: $font-regular;
@@ -21,7 +35,6 @@
   line-height: 36px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 54px;
     font-size: 60px;
     line-height: 60px;
   }

@@ -71,7 +71,7 @@
 
   grid-area: results;
   display: flex;
-  margin-bottom: 34px;
+  margin-bottom: 60px;
 }
 
 .ambassador__border-wrapper {
@@ -155,6 +155,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 0;
+    margin-bottom: 0;
     flex-direction: row;
   }
 }

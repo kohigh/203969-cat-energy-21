@@ -61,15 +61,15 @@
       <fieldset class="fieldset__inner fieldset__inner--program">
         <h3 class="visually-hidden">Программа на выбор</h3>
         <ul class="form__programs-list">
-          <li class="form__interactive-wrapper">
-            <input class="visually-hidden form__radio" type="radio" name="program" id="slim">
+          <li class="form__interactive-wrapper form__interactive-wrapper--radio">
+            <input class="visually-hidden form__radio" type="radio" name="program" id="slim" checked>
             <label class="form__label form__label--radio" for="slim">Похудение</label>
           </li>
-          <li class="form__interactive-wrapper">
+          <li class="form__interactive-wrapper form__interactive-wrapper--radio">
             <input class="visually-hidden form__radio" type="radio" name="program" id="gain">
             <label class="form__label form__label--radio" for="gain">Набор массы</label>
           </li>
-          <li class="form__interactive-wrapper">
+          <li class="form__interactive-wrapper form__interactive-wrapper--radio">
             <input class="visually-hidden form__radio" type="radio" name="program" id="recommend">
             <label class="form__label form__label--radio" for="recommend">Не знаю (нужен ваш совет)</label>
           </li>
@@ -102,20 +102,20 @@
           <h3 class="form__legend">Дополнительно</h3>
           <ul class="form__additional-list">
             <li class="form__interactive-wrapper">
-              <input type="text" class="visually-hidden form__checkbox" name="sweetener" id="sweetener">
-              <label class="form__program-item" for="sweetener">Сахарозаменитель</label>
+              <input type="checkbox" class="visually-hidden form__checkbox" name="sweetener" id="sweetener" checked>
+              <label class="form__label form__label--checkbox" for="sweetener">Сахарозаменитель</label>
             </li>
             <li class="form__interactive-wrapper">
-              <input type="text" class="visually-hidden form__checkbox" name="drink-water" id="drink-water">
-              <label for="drink-water">Питьевая вода</label>
+              <input type="checkbox" class="visually-hidden form__checkbox" name="drink-water" id="drink-water">
+              <label class="form__label form__label--checkbox" for="drink-water">Питьевая вода</label>
             </li>
             <li class="form__interactive-wrapper">
-              <input type="text" class="visually-hidden form__checkbox" name="milk" id="milk">
-              <label for="milk">Молоко</label>
+              <input type="checkbox" class="visually-hidden form__checkbox" name="milk" id="milk">
+              <label class="form__label form__label--checkbox" for="milk">Молоко</label>
             </li>
             <li class="form__interactive-wrapper">
-              <input type="text" class="visually-hidden form__checkbox" name="vitamins" id="vitamins">
-              <label for="vitamins">Витамины</label>
+              <input type="checkbox" class="visually-hidden form__checkbox" name="vitamins" id="vitamins">
+              <label class="form__label form__label--checkbox" for="vitamins">Витамины</label>
             </li>
           </ul>
         </div>
@@ -129,7 +129,7 @@
   <footer class="footer">
     <section class="footer__contact contact">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <div class="contact__attention-wrapper">
+      <div class="contact__attention-wrapper contact__attention-wrapper--more-space">
         <p class="contact__attention">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="contact__address">
           ул. Большая

@@ -34,6 +34,41 @@
 
   &--radio {
     color: $radio-color;
+
+    .form__radio:checked + &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      width: 13px;
+      height: 13px;
+      background-color: $form-radio-toggle;
+      border-radius: 50%;
+
+      @media (min-width: $tablet-width) {
+        top: 12px;
+        left: 12px;
+        width: 17px;
+        height: 18px;
+      }
+    }
+  }
+
+  &--checkbox {
+    .form__checkbox:checked + &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 2px;
+      width: 30px;
+      height: 30px;
+      background-image: url("../../img/checkbox.svg");
+
+      @media (min-width: $tablet-width) {
+        top: 7px;
+        left: 7px;
+      }
+    }
   }
 }
 
@@ -70,7 +105,9 @@
 }
 
 .form__additional-wrapper {
-  padding: 0 71px;
+  @media (min-width: $desktop-width) {
+    padding: 0 71px;
+  }
 }
 
 .form__additional-list {
@@ -145,6 +182,7 @@
 }
 
 .form__interactive-wrapper {
+  position: relative;
   height: 30px;
   padding-top: 6px;
   padding-left: 45px;
@@ -152,6 +190,25 @@
   @media (min-width: $tablet-width) {
     height: 45px;
     padding-left: 60px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $form-interactive-border;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &--radio::before {
+    border-radius: 50%;
   }
 }
 

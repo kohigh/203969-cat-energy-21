@@ -21,6 +21,10 @@
     width: $ambassador-width-tablet;
     height: 620px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 21px;
+  }
 }
 
 .range__img {

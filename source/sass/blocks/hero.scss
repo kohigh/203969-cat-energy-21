@@ -25,14 +25,23 @@
 }
 
 .hero__top {
+  display: grid;
+
+  @media (min-width: $mobile-width) {
+    row-gap: 23px;
+    margin-bottom: 27px;
+  }
+
   @media (min-width: $tablet-width) {
-    margin: 0 87px 21px;
+    row-gap: 36px;
+    margin: 0 87px 15px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 95px 46px 0 80px;
     grid-column: 1/2;
     grid-row: 1/2;
+    grid-template-rows: min-content;
   }
 }
 
@@ -64,7 +73,6 @@
     text-align: left;
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 42px;
   }
 }
 
