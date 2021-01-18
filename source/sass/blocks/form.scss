@@ -16,21 +16,31 @@
 .form__legend {
   @include reset-margin-padding;
 
-  font-size: 24px;
-  line-height: 26px;
-  letter-spacing: -1px;
+  @media (min-width: $mobile-width) {
+    @include strike(16px);
+
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -1px;
+  }
 
   @media (min-width: $tablet-width) {
+    @include strike(24px);
+
     font-size: 36px;
     line-height: 36px;
     letter-spacing: -1.3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include strike(39px);
   }
 }
 
 .form__label {
   @include form-text;
 
-  margin-right: 14px;
+  margin-right: 10px;
 
   &--radio {
     color: $radio-color;
@@ -105,8 +115,17 @@
 }
 
 .form__additional-wrapper {
+  @include block-padding;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 34px;
+  }
+
   @media (min-width: $desktop-width) {
     padding: 0 71px;
+    margin-bottom: 10px;
   }
 }
 
@@ -115,13 +134,14 @@
   @include reset-margin-padding;
   @include form-text;
 
-  padding-top: 32px;
-  padding-bottom: 25px;
   display: grid;
-  row-gap: 13px;
+
+  @media (min-width: $mobile-width) {
+    row-gap: 13px;
+    margin-bottom: 33px;
+  }
 
   @media (min-width: $tablet-width) {
-    padding-top: 56px;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 59px;
     row-gap: 27px;
@@ -130,7 +150,7 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 77px;
-    padding-bottom: 32px;
+    margin-bottom: 0;
   }
 }
 
@@ -146,20 +166,43 @@
 }
 
 .form__cat-info {
+  @include block-padding;
+
   display: grid;
-  row-gap: 14px;
-  margin-bottom: 12px;
+
+  @media (min-width: $mobile-width) {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    row-gap: 14px;
+    margin-bottom: 16px;
+  }
 
   @media (min-width: $tablet-width) {
     row-gap: 19px;
-    padding-top: 24px;
-    margin-bottom: 54px;
+    padding: 34px 41px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
     @include reset-margin-padding;
 
-    padding-left: 71px;
+    margin-bottom: 21px;
+    padding-left: 72px;
+  }
+}
+
+.form__programs-wrapper {
+  @media (min-width: $mobile-width) {
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 41px;
+    margin-bottom: 73px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include reset-margin-padding;
   }
 }
 
@@ -168,16 +211,15 @@
   @include reset-margin-padding;
 
   display: grid;
-  row-gap: 13px;
-  padding-top: 14px;
-  margin-bottom: 12px;
+
+  @media (min-width: $mobile-width) {
+    padding: 23px 20px 17px;
+    row-gap: 13px;
+  }
 
   @media (min-width: $tablet-width) {
+    padding: 23px 28px 21px;
     row-gap: 8px;
-    padding-top: 23px;
-    padding-left: 29px;
-    padding-bottom: 21px;
-    margin-bottom: 42px;
   }
 }
 
@@ -213,41 +255,70 @@
 }
 
 .form__contacts {
+  @include block-padding;
+
   display: grid;
-  row-gap: 13px;
-  margin-bottom: 7px;
+
+
+  @media (min-width: $mobile-width) {
+    row-gap: 13px;
+    margin-bottom: 25px;
+  }
 
   @media (min-width: $tablet-width) {
     row-gap: 19px;
+    padding: 20px 40px;
     margin-bottom: 46px;
   }
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr;
     column-gap: 73px;
-    padding: 0 73px;
+    padding: 15px 73px;
+    margin-bottom: 6px;
   }
 }
 
 .form__comment {
   display: grid;
-  row-gap: 37px;
-  margin-bottom: 4px;
 
   @media (min-width: $tablet-width) {
-    row-gap: 75px;
-    margin-bottom: 46px;
+    row-gap: 17px;
+    margin-bottom: 41px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 71px;
-    margin-bottom: 49px;
+    padding: 15px 71px;
+    margin-bottom: 0;
+  }
+}
+
+.form__comment-wrapper {
+  @include block-padding;
+
+  @media (min-width: $mobile-width) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include reset-margin-padding;
   }
 }
 
 .form__textarea {
-  padding: 11px;
-  height: 150px;
+  width: 100%;
+
+  @media (min-width: $mobile-width) {
+    padding: 12px 13px;
+    height: 150px;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 11px 18px;

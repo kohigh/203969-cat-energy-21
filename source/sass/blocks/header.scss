@@ -17,25 +17,34 @@
 
   display: flex;
   position: relative;
-  padding-top: 14px;
-  padding-bottom: 14px;
+
+  @media (min-width: $mobile-width) {
+    padding-top: 16px;
+    padding-bottom: 12px;
+  }
 
   @media (min-width: $tablet-width) {
     margin-right: 33px;
   }
+}
 
-  //@media (min-width: $desktop-width) {
-  //
-  //}
+.header__logo {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  align-items: center;
+
+  @media (min-width: $mobile-width) {
+    column-gap: 55px;
+  }
+
+  @media (min-width: $tablet-width) {
+    column-gap: 13px;
+  }
 }
 
 .header__logo-img {
-  margin-right: 50px;
-  vertical-align: middle;
-
   @media (min-width: $tablet-width) {
     background-image: url("../../img/logo-tablet.svg");
-    margin-right: 9px;
     width: 60px;
     height: 50px;
   }

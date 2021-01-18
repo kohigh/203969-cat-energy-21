@@ -1,7 +1,10 @@
 .main__top {
   display: grid;
-  row-gap: 37px;
-  padding: 28px 20px;
+
+  @media (min-width: $mobile-width) {
+    row-gap: 37px;
+    padding: 29px 20px;
+  }
 
   @media (min-width: $tablet-width) {
     row-gap: 54px;
