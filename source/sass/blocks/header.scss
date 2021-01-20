@@ -1,28 +1,135 @@
 .header {
-  @include block-padding;
-  @include highlight-block(grey);
-
-  padding-top: 11px;
-  padding-bottom: 18px;
-
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    margin: 15px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 40px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 .header__top {
+  @include block-padding;
+
   display: flex;
+  position: relative;
+
+  @media (min-width: $mobile-width) {
+    padding-top: 16px;
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 33px;
+  }
+}
+
+.header__logo {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  align-items: center;
+
+  @media (min-width: $mobile-width) {
+    column-gap: 55px;
+  }
+
+  @media (min-width: $tablet-width) {
+    column-gap: 13px;
+  }
+}
+
+.header__logo-img {
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/logo-tablet.svg");
+    width: 60px;
+    height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/logo-desktop.svg");
+    width: 70px;
+    height: 60px;
+  }
+}
+
+.header__logo-text {
+  vertical-align: middle;
+
+  @media (min-width: $tablet-width) {
+    width: 101px;
+    height: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 118px;
+    height: 21px;
+  }
 }
 
 .header__toggle {
+  position: absolute;
+  padding: 16px;
+  top: 10px;
+  right: 20px;
+  z-index: 1;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 7px;
+    width: 25px;
+    height: 2px;
+    background-color: $header-toggle-color;
+    box-shadow: 0 8px 0 0 $header-toggle-color, 0 16px 0 0 $header-toggle-color;
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
+.header--opened .header__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 25px;
+    height: 2px;
+    background-color: $toggle-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
 .header__nav-wrapper {
   display: none;
+  margin: auto;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 127px;
+  }
 }
 
 .header--no-js .header__nav-wrapper {

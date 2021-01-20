@@ -1,4 +1,49 @@
 .socials__list {
   @include reset-list;
   @include reset-margin-padding;
+
+  width: 165px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
+}
+
+.socials__item {
+  margin-right: 33px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 27px;
+  }
+}
+
+.socials__icon {
+  &--vk {
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 22px;
+    }
+  }
+
+  &--ig {
+    @media (min-width: $tablet-width) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--fb {
+    @media (min-width: $tablet-width) {
+      width: 28px;
+      height: 33px;
+    }
+  }
 }

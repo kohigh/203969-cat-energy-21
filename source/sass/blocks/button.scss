@@ -1,6 +1,8 @@
 .button {
   @include default-link;
 
+  padding: 10px 0;
+  text-align: center;
   border: none;
   background-color: $button-background;
   color: $button-color;

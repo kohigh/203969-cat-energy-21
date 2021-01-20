@@ -1,27 +1,68 @@
-.main {
-  @include block-padding;
-  @include highlight-block(yellowgreen);
-}
-
 .main__top {
-  @include block-padding;
+  display: grid;
+
+  @media (min-width: $mobile-width) {
+    row-gap: 37px;
+    padding: 29px 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    row-gap: 54px;
+    padding: 33px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 110px;
+  }
+
+  &--space-after {
+    margin-bottom: 11px;
+
+    @media (min-width: $tablet-width) {
+      padding: 33px 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 60px 110px;
+    }
+  }
 }
 
 .main__title {
   @include reset-margin-padding;
 
-  margin-bottom: 25px;
   color: inherit;
   font-family: $font-main;
   font-weight: $font-regular;
   font-size: 36px;
   line-height: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .main__description {
   @include reset-margin-padding;
 
-  margin-bottom: 29px;
   font-family: $font-main;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-xl;
+    line-height: 30px;
+  }
+}
+
+.main__features {
+  margin-bottom: 42px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 16px;
+  }
 }

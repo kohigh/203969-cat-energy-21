@@ -1,53 +1,112 @@
 .hero {
-  @include highlight-block(indianred);
-
+  @include block-padding;
+  background:
+    linear-gradient($hero-background-gr1-mobile 302px, $hero-background-gr2-mobile 302px),
+    url("../../img/hero-mobile.png") no-repeat top;
+  background-size: 100%;
   display: grid;
-  padding-bottom: 25px;
+  padding-top: 28px;
+  padding-bottom: 24px;
   color: $hero-color;
   font-family: $font-main;
   font-weight: $font-regular;
 
-  // TODO: For testing. Remove later
-  background-color: #68b738;
+  @media (min-width: $tablet-width) {
+    background: none;
+    padding-top: 32px;
+    color: $hero-color-tablet;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.hero__top {
+  display: grid;
+
+  @media (min-width: $mobile-width) {
+    row-gap: 23px;
+    margin-bottom: 27px;
+  }
+
+  @media (min-width: $tablet-width) {
+    row-gap: 36px;
+    margin: 0 87px 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 95px 46px 0 80px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    grid-template-rows: min-content;
+  }
 }
 
 .hero__overlay {
+  margin: 0 auto 4px;
+  background-repeat: no-repeat;
+
   @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    width: 709px;
+    height: 609px;
     grid-column: 1/2;
     grid-row: 3/4;
   }
 
   @media (min-width: $desktop-width) {
-    grid-row: 1/4;
+    margin: 14px 0 0 17px;
+    width: 552px;
+    height: 499px;
+    grid-row: 1/2;
     grid-column: 2/3;
   }
 }
 
 .hero__title {
-  @media (min-width: $desktop-width) {
-    grid-column: 1/2;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
 .hero__description {
-  @media (min-width: $desktop-width) {
-    grid-column: 1/2;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-xl;
+    text-align: left;
+    margin-bottom: 0;
   }
 }
 
 .hero__button {
-  margin-right: auto;
-  margin-bottom: auto;
-
   font-size: $font-size-s;
   line-height: 18px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   @media (min-width: $tablet-width) {
+    padding: 17px 27px;
+    font-size: $font-size-xl;
+    line-height: 20px;
+    margin: 29px auto auto 82px;
     grid-column: 1/2;
     grid-row: 3/4;
   }
 
   @media (min-width: $desktop-width) {
     grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: auto;
+    margin-left: 80px;
+    margin-bottom: 132px;
   }
 }

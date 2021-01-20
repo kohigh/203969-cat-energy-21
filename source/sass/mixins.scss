@@ -4,18 +4,17 @@
 }
 
 @mixin block-padding {
-  padding-top: 27px;
-
-  @media (min-width: $mobile-width) {
-    padding: 0 20px;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
 
@@ -42,10 +41,22 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-xl;
+    line-height: 30px;
+  }
 }
 
-// TODO: For testing. Remove later
-@mixin highlight-block($color) {
-  outline: 2px solid $color;
-  outline-offset: -2px;
+@mixin strike($top) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: $top;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    background-color: $section-divider;
+    height: 2px;
+  }
 }

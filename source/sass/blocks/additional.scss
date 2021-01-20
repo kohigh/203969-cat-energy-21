@@ -1,13 +1,53 @@
 .additional {
   @include block-padding;
-  @include highlight-block(darkblue);
+
+  position: relative;
+  padding-top: 25px;
+
+  @media (min-width: $mobile-width) {
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 70px;
+    padding-right: 70px;
+
+    margin-bottom: 86px;
+  }
 }
 
 .additional__wrapper {
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr auto;
     grid-column-gap: 79px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.additional__header {
+  display: inline-block;
+  background-color: $additional-background;
+
+  @media (min-width: $mobile-width) {
+    padding-right: 22px;
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 37px;
+    margin-bottom: 78px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
+    margin-bottom: 80px;
   }
 }
 
@@ -18,71 +58,218 @@
   font-weight: $font-regular;
   font-size: 24px;
   line-height: 24px;
-  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include strike(45px);
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include strike(47px);
+  }
 }
 
 .additional__list {
+  @include reset-margin-padding;
   @include reset-list;
+
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include reset-margin-padding;
+  }
 }
 
 .additional__item {
+  height: 129px;
+  display: grid;
+  row-gap: 11px;
+  padding-top: 12px;
+  padding-bottom: 15px;
+  border: 1px solid $additional-item-border;
+  border-left: none;
+  border-right: none;
+
+  @media (min-width: $mobile-width) {
+    grid-template-areas:
+      "title"
+      "spec"
+      "button";
+  }
+
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    @include reset-margin-padding;
+
+    padding: 0 40px;
+    row-gap: 0;
+    grid-template-areas:
+      "title spec"
+      "button button";
+    grid-template-columns: auto 1fr;
+    align-content: space-evenly;
+    height: 139px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include reset-margin-padding;
+
+    height: 72px;
+    align-items: center;
+    grid-template-columns: 284px auto 244px;
+    grid-template-areas: "title spec button";
+    column-gap: 41px;
+  }
+
+  & + & {
+    border-top: 0;
   }
 }
 
 .additional__item-title {
   @include reset-margin-padding;
 
+  grid-area: title;
   color: $additional-item-title;
   font-family: $font-main;
   font-weight: $font-regular;
   font-size: $font-size-m;
   text-transform: uppercase;
 
-  @media (min-width: $mobile-width) {
-    grid-column: span 2;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-column: span 1;
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-xl;
+    line-height: $font-size-xl;
   }
 }
 
-.additional__item-spec {
+.additional__spec {
+  @include reset-margin-padding;
+
+  grid-area: spec;
+  display: grid;
+
+  @media (min-width: $mobile-width) {
+    grid-template-columns: auto auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include reset-margin-padding;
+    column-gap: 38px;
+    grid-template-columns: 1fr 44px;
+  }
+}
+
+.additional__spec-key {
   @include reset-margin-padding;
 
   color: $grey-tundora;
   font-family: $font-additional;
   font-weight: $font-regular;
   font-size: $font-size-s;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-m;
+    line-height: $font-size-xl;
+  }
+}
+
+.additional__spec-value {
+  @include reset-margin-padding;
+
+  color: $grey-tundora;
+  font-family: $font-additional;
+  font-weight: $font-regular;
+  font-size: $font-size-s;
+  text-align: right;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-m;
+    line-height: $font-size-xl;
+  }
 
   @media (min-width: $desktop-width) {
-    grid-column: span 1;
+    text-align: left;
   }
 }
 
 .additional__button {
-  @media (min-width: $mobile-width) {
-    grid-column: span 2;
-  }
-
-  @media (min-width: $tablet-width) {
-    grid-column: span 4;
-  }
-
-  @media (min-width: $desktop-width) {
-    grid-column: span 1;
-  }
+  grid-area: button;
 }
 
 .additional__promo {
-  @include highlight-block(yellowgreen);
-
+  position: relative;
+  height: 289px;
+  background: url("../../img/catalog-promo.jpg") no-repeat;
+  background-size: 100%;
   color: $additional__promo-text;
   font-family: $font-additional;
   font-size: $font-size-m;
-  // TODO: For testing. Remove later
-  background-color: yellowgreen;
+  display: flex;
+  align-items: flex-end;
+  padding: 42px;
+
+  @media (min-width: $tablet-width) {
+    height: 200px;
+    padding: 72px 125px;
+    display: grid;
+    grid-template-columns: min-content;
+    justify-content: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include reset-margin-padding;
+
+    padding: 40px;
+    width: 245px;
+    height: 100%;
+    background-size: auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 100px;
+    background-image: url("../../img/additional-promo.svg");
+    width: 78px;
+    height: 80px;
+
+    @media (min-width: $tablet-width) {
+      left: 79px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 85px;
+    }
+  }
+}
+
+.additional__promo-text {
+  @include reset-margin-padding;
+
+  font-size: $font-size-m;
+  line-height: $font-size-xl;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-size-m;
+    line-height: $font-size-xl;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
 }
