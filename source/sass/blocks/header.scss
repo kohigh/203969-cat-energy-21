@@ -2,11 +2,11 @@
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
-    margin: 15px 0;
+    padding: 15px 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 40px 0 0;
+    padding: 39px 0 14px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -19,61 +19,43 @@
   position: relative;
 
   @media (min-width: $mobile-width) {
-    padding-top: 16px;
-    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-bottom: 13px;
   }
 
   @media (min-width: $tablet-width) {
-    margin-right: 33px;
-  }
-}
-
-.header__logo {
-  display: grid;
-  grid-template-columns: min-content min-content;
-  align-items: center;
-
-  @media (min-width: $mobile-width) {
-    column-gap: 55px;
+    padding-top: 9px;
+    padding-bottom: 13px;
+    margin-right: 34px;
   }
 
-  @media (min-width: $tablet-width) {
-    column-gap: 13px;
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
   }
 }
 
 .header__logo-img {
+  @media (min-width: $mobile-width) {
+    width: 191px;
+    height: 38px;
+  }
+
   @media (min-width: $tablet-width) {
-    background-image: url("../../img/logo-tablet.svg");
-    width: 60px;
-    height: 50px;
+    width: 174px;
+    height: 52px;
   }
 
   @media (min-width: $desktop-width) {
     background-image: url("../../img/logo-desktop.svg");
-    width: 70px;
-    height: 60px;
-  }
-}
-
-.header__logo-text {
-  vertical-align: middle;
-
-  @media (min-width: $tablet-width) {
-    width: 101px;
-    height: 19px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 118px;
-    height: 21px;
+    width: 202px;
+    height: 59px;
   }
 }
 
 .header__toggle {
   position: absolute;
   padding: 16px;
-  top: 10px;
+  top: 11px;
   right: 20px;
   z-index: 1;
   width: 24px;

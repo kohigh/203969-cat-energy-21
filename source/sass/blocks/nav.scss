@@ -20,6 +20,8 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+
     border: none;
   }
 

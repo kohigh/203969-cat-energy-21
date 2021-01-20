@@ -1,3 +1,18 @@
+.socials {
+  padding-top: 20px;
+  padding-bottom: 15px;
+
+  border: 1px solid $footer-hr;
+  border-right: none;
+  border-left: none;
+
+  @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+
+    border: none;
+  }
+}
+
 .socials__list {
   @include reset-list;
   @include reset-margin-padding;
@@ -9,19 +24,20 @@
   justify-content: center;
 
   @media (min-width: $tablet-width) {
-    justify-content: flex-end;
+    width: 129px;
+    justify-content: initial;
   }
 }
 
 .socials__item {
-  margin-right: 33px;
+  margin-right: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 26px;
+  }
 
   &:last-child {
     margin-right: 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    margin-right: 27px;
   }
 }
 

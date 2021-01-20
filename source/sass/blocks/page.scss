@@ -14,4 +14,17 @@
   font-weight: $font-regular;
   font-size: $font-size-s;
   line-height: 18px;
+
+  @media (min-width: $desktop-width) {
+    z-index: -1;
+    background:
+      linear-gradient(to right, $hero-background-gr2-mobile 50vw, $hero-background-gr1-mobile 50vw),
+      url("../img/index/desktop/hero@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background:
+        linear-gradient(to right, $hero-background-gr2-mobile 50vw, $hero-background-gr1-mobile 50vw),
+        url("../img/index/desktop/hero@2x.jpg");
+    }
+  }
 }

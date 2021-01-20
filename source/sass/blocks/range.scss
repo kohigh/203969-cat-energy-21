@@ -1,8 +1,19 @@
 .range {
   display: grid;
-  padding-bottom: 30px;
+
+  @media (min-width: $mobile-width) {
+    padding-top: 43px;
+    padding-bottom: 30px;
+    row-gap: 26px;
+  }
 
   @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+    row-gap: 0;
+    padding-bottom: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
     @include reset-margin-padding;
   }
 }
@@ -10,50 +21,64 @@
 .range__img-container {
   @include reset-margin-padding;
 
-  grid-column: 1;
-  grid-row: 1;
-  position: relative;
-  margin: 0 auto 60px;
-  width: $ambassador-width-mobile;
-  height: 232px;
+  display: grid;
+
+  @media (min-width: $mobile-width) {
+    width: $ambassador-width-mobile;
+    margin: 0 auto;
+    height: 232px;
+  }
 
   @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
     width: $ambassador-width-tablet;
     height: 620px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 21px;
+    margin: 0;
+    width: 405px;
+    height: 536px;
   }
 }
 
 .range__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: $ambassador-width-mobile 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
 
-  @media (min-width: $tablet-width) {
-    background-size: $ambassador-width-tablet 100%;
-  }
+  &--before {
+    background-image: url("../img/index/mobile/ambassador-before@1x.png");
 
-  &--foreground {
-    background-image: url("../../img/range-before.png");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/mobile/ambassador-before@2x.png");
+    }
 
     @media (min-width: $tablet-width) {
-      background-image: url("../../img/cat-fat.png");
-      width: 50%;
+      background-image: url("../img/index/tablet/ambassador-before@1x.png");
+      background-position: 100% 64px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 365px;
+      background-image: url("../img/index/desktop/ambassador-before@1x.png");
+      background-position: 100% 0;
     }
   }
 
-  &--background {
+  &--after {
     display: none;
 
     @media (min-width: $tablet-width) {
       display: block;
-      background-image: url("../../img/cat-skinny.png");
+      background-image: url("../img/index/tablet/ambassador-after@1x.png");
+      background-position: 100% 72px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 325px;
+      background-image: url("../img/index/desktop/ambassador-after@1x.png");
+      background-position: 100% 0;
+      margin-left: -40px;
     }
   }
 }
@@ -61,20 +86,26 @@
 .range__scale {
   @include reset-margin-padding;
 
-  z-index: 1;
-  grid-column: 1;
-  grid-row: 1;
-  margin: auto 55px 0;
-  display: flex;
+  display: grid;
   align-items: center;
+
+  @media (min-width: $mobile-width) {
+    grid-template-columns: min-content 1fr min-content;
+    padding-left: 58px;
+    padding-right: 53px;
+    column-gap: 12px;
+  }
 
   @media (min-width: $tablet-width) {
     width: 600px;
-    margin: auto auto 57px;
+    padding-left: 98px;
+    column-gap: 22px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: auto 25px 99px;
+    @include reset-margin-padding;
+
+    padding: 0 40px;
   }
 }
 
@@ -105,23 +136,22 @@
 .range__button {
   @include reset-margin-padding;
 
-  padding: 6px;
   background-color: inherit;
   border: none;
   font-family: $font-main;
   font-weight: $font-regular;
-  font-size: $font-size-m;
-  line-height: 20px;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
-    padding: 10px;
-    font-size: $font-size-xl;
-    line-height: 30px;
+  @media (min-width: $mobile-width) {
+    padding: 6px;
+    font-size: $font-size-m;
+    line-height: 20px;
   }
 
-  &:not(:last-child) {
-    margin-right: 15px;
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    font-size: $font-size-xl;
+    line-height: 30px;
   }
 }
 
@@ -129,6 +159,8 @@
   display: none;
 
   @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+
     display: block;
   }
 }
@@ -138,6 +170,10 @@
   width: 428px;
   height: 6px;
   background-color: $range-scale;
+
+  @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+  }
 }
 
 .range__input[type="range"]::-webkit-slider-runnable-track {

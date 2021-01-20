@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="./js/script.js" async></script>
 </head>
 <body class="page__body">
-  <header class="header">
+  <header class="header header--no-js">
     <div class="header__top">
       <a class="header__logo">
-        <img class="header__logo-img" src="./img/logo-mobile.svg" alt="Лого название «CAT ENERGY»" width="34" height="38">
-        <img class="header__logo-text" src="./img/logo-text.svg" alt="Лого название «CAT ENERGY»" width="101" height="18">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="../img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="../img/logo-tablet.svg">
+          <img class="header__logo-img" src="../img/logo-mobile.svg" alt="Лого название «CAT ENERGY»" width="191" height="38">
+        </picture>
       </a>
       <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
@@ -42,7 +44,7 @@
     </section>
     <form class="form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="fieldset__inner fieldset__inner--cat-info">
-        <h3 class="visually-hidden">Личные данные кота</h3>
+        <legend class="visually-hidden">Личные данные кота</legend>
         <div class="form__cat-info">
           <p class="form__input-wrapper">
             <label class="form__label" for="name">Имя:*</label>
@@ -59,7 +61,7 @@
         </div>
       </fieldset>
       <fieldset class="fieldset__inner fieldset__inner--program">
-        <h3 class="visually-hidden">Программа на выбор</h3>
+        <legend class="visually-hidden">Программа на выбор</legend>
         <div class="form__programs-wrapper">
           <ul class="form__programs-list">
             <li class="form__interactive-wrapper form__interactive-wrapper--radio">
@@ -78,9 +80,7 @@
         </div>
       </fieldset>
       <fieldset class="fieldset__inner fieldset__inner--contact">
-        <header class="fieldset__top">
-          <h3 class="form__legend">Контактные&nbsp;данные (владельца кота)</h3>
-        </header>
+        <legend class="form__legend">Контактные&nbsp;данные (владельца кота)</legend>
         <div class="form__contacts">
           <p class="form__input-wrapper">
             <label class="form__label" for="email">E&#8209;mail:*</label>
@@ -93,9 +93,7 @@
         </div>
       </fieldset>
       <fieldset class="fieldset__inner fieldset__inner--comment">
-        <header class="fieldset__top">
-          <label class="form__legend" for="cat-habits">Комментарий</label>
-        </header>
+        <label class="form__legend" for="cat-habits">Комментарий</label>
         <div class="form__comment">
           <div class="form__comment-wrapper">
             <textarea class="form__textarea" name="cat-habits" id="cat-habits"
@@ -104,9 +102,7 @@
         </div>
       </fieldset>
       <fieldset class="fieldset__inner fieldset__inner--additional">
-        <header class="fieldset__top">
-          <h3 class="form__legend">Дополнительно</h3>
-        </header>
+        <legend class="form__legend">Дополнительно</legend>
         <div class="form__additional-wrapper">
           <ul class="form__additional-list">
             <li class="form__interactive-wrapper">
@@ -137,7 +133,7 @@
   <footer class="footer">
     <section class="footer__contact contact">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <div class="contact__attention-wrapper contact__attention-wrapper--more-space">
+      <div class="contact__attention-wrapper">
         <p class="contact__attention">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="contact__address">
           ул. Большая
@@ -156,7 +152,7 @@
       <a class="footer__logo">
         <img src="./img/logo-text.svg" alt="Лого название «CAT ENERGY»" width="128" height="24">
       </a>
-      <section class="footer__socials socials">
+      <section class="socials">
         <h2 class="visually-hidden">Наши социальные сети</h2>
         <ul class="socials__list">
           <li class="socials__item">
@@ -195,5 +191,6 @@
       </p>
     </div>
   </footer>
+  <script src="./js/script.js" async></script>
 </body>
 </html>
