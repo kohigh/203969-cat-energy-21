@@ -32,9 +32,9 @@
     "button button";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr min-content;
-  row-gap: 23px;
+  row-gap: 12px;
   height: 209px;
-  padding: 20px 20px 23px;
+  padding: 20px 20px 25px;
   border: 1px solid $catalog-item-border;
 
   & + & {
@@ -68,9 +68,20 @@
   }
 }
 
-.catalog__item-image {
-  @media (max-width: $tablet-width - 1px) {
+.catalog__img-wrapper {
+  @media (min-width: $mobile-width) {
     margin: auto auto 0;
+  }
+
+  &--small-icon {
+    margin: auto auto 6px;
+  }
+}
+
+.catalog__item-image {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -132,6 +143,7 @@
 
   @media (max-width: $tablet-width - 1px) {
     margin-top: auto;
+    margin-bottom: 12px;
   }
 
   @media (min-width: $tablet-width) {

@@ -10,8 +10,11 @@
   <header class="header header--no-js">
     <div class="header__top">
       <a class="header__logo">
-        <img class="header__logo-img" src="./img/logo-mobile.svg" alt="Лого название «CAT ENERGY»" width="34" height="38">
-        <img class="header__logo-text" src="./img/logo-text.svg" alt="Лого название «CAT ENERGY»" width="101" height="18">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="../img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="../img/logo-tablet.svg">
+          <img class="header__logo-img" src="../img/logo-mobile.svg" alt="Лого название «CAT ENERGY»" width="191" height="38">
+        </picture>
       </a>
       <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
@@ -39,8 +42,13 @@
       <div class="catalog__list">
         <article class="catalog__item">
           <a class="catalog__link-wrapper catalog__link-wrapper--small-icon" href="./404.html">
-            <img class="catalog__item-image" src="./img/catalog-1.jpg" width="68" height="86"
-              alt="«CAT ENERGY» PRO с курицей 500 грамм за 700 руб.">
+            <div class="catalog__img-wrapper catalog__img-wrapper--small-icon">
+              <picture>
+                <source media="(min-width: 768px)" srcset="../img/catalog/tablet/catalog-1@1x.jpg">
+                <img class="catalog__item-image" src="../img/catalog/mobile/catalog-1@1x.jpg" width="68" height="86"
+                     alt="«CAT ENERGY» PRO с курицей 500 грамм за 700 руб.">
+              </picture>
+            </div>
             <span class="catalog__item-title">Cat ENERGY PRO 500&nbsp;г</span>
           </a>
           <table class="catalog__properties">
@@ -61,8 +69,13 @@
         </article>
         <article class="catalog__item">
           <a class="catalog__link-wrapper" href="./404.html">
-            <img class="catalog__item-image" src="./img/catalog-2.jpg" width="84" height="101"
-              alt="«CAT ENERGY» PRO с курицей 1 кг за 1000 руб.">
+            <div class="catalog__img-wrapper">
+              <picture>
+                <source media="(min-width: 768px)" srcset="../img/catalog/tablet/catalog-2@1x.jpg">
+                <img class="catalog__item-image" src="../img/catalog/mobile/catalog-2@1x.jpg" width="84" height="101"
+                     alt="«CAT ENERGY» PRO с курицей 1 кг за 1000 руб.">
+              </picture>
+            </div>
             <span class="catalog__item-title">Cat ENERGY PRO 1000&nbsp;г</span>
           </a>
           <table class="catalog__properties">
@@ -83,8 +96,13 @@
         </article>
         <article class="catalog__item">
           <a class="catalog__link-wrapper catalog__link-wrapper--small-icon" href="./404.html">
-            <img class="catalog__item-image" src="./img/catalog-3.jpg" width="68" height="78"
-              alt="«CAT ENERGY» PRO с рыбой 500 грамм за 700 руб.">
+            <div class="catalog__img-wrapper catalog__img-wrapper--small-icon">
+              <picture>
+                <source media="(min-width: 768px)" srcset="../img/catalog/tablet/catalog-3@1x.jpg">
+                <img class="catalog__item-image" src="../img/catalog/mobile/catalog-3@1x.jpg" width="68" height="78"
+                     alt="«CAT ENERGY» PRO с рыбой 500 грамм за 700 руб.">
+              </picture>
+            </div>
             <span class="catalog__item-title">Cat ENERGY PRO 500&nbsp;г</span>
           </a>
           <table class="catalog__properties">
@@ -105,8 +123,13 @@
         </article>
         <article class="catalog__item">
           <a class="catalog__link-wrapper" href="./404.html">
-            <img class="catalog__item-image" src="./img/catalog-4.jpg" width="84" height="101"
-              alt="«CAT ENERGY» PRO с рыбой 1 кг за 1000 руб.">
+            <div class="catalog__img-wrapper">
+              <picture>
+                <source media="(min-width: 768px)" srcset="../img/catalog/tablet/catalog-4@1x.jpg">
+                <img class="catalog__item-image" src="../img/catalog/mobile/catalog-4@1x.jpg" width="84" height="101"
+                     alt="«CAT ENERGY» PRO с рыбой 1 кг за 1000 руб.">
+              </picture>
+            </div>
             <span class="catalog__item-title">Cat ENERGY PRO 1000&nbsp;г</span>
           </a>
           <table class="catalog__properties">
@@ -127,8 +150,13 @@
         </article>
         <article class="catalog__item">
           <a class="catalog__link-wrapper catalog__link-wrapper--small-icon" href="./404.html">
-            <img class="catalog__item-image" src="./img/catalog-5.jpg" width="68" height="78"
-              alt="«CAT ENERGY» SLIM с гречкой 500 грамм за 400 руб.">
+            <div class="catalog__img-wrapper catalog__img-wrapper--small-icon">
+              <picture>
+                <source media="(min-width: 768px)" srcset="../img/catalog/tablet/catalog-5@1x.jpg">
+                <img class="catalog__item-image" src="../img/catalog/mobile/catalog-5@1x.jpg" width="68" height="78"
+                     alt="«CAT ENERGY» SLIM с гречкой 500 грамм за 400 руб.">
+              </picture>
+            </div>
             <span class="catalog__item-title">Cat ENERGY SLIM 500&nbsp;г</span>
           </a>
           <table class="catalog__properties">
@@ -149,8 +177,13 @@
         </article>
         <article class="catalog__item">
           <a class="catalog__link-wrapper" href="./404.html">
-            <img class="catalog__item-image" src="./img/catalog-6.jpg" width="84" height="100"
-              alt="«CAT ENERGY» SLIM с гречкой 1 кг за 700 руб.">
+            <div class="catalog__img-wrapper">
+              <picture>
+                <source media="(min-width: 768px)" srcset="../img/catalog/tablet/catalog-6@1x.jpg">
+                <img class="catalog__item-image" src="../img/catalog/mobile/catalog-6@1x.jpg" width="84" height="100"
+                     alt="«CAT ENERGY» SLIM с гречкой 1 кг за 700 руб.">
+              </picture>
+            </div>
             <span class="catalog__item-title">Cat ENERGY SLIM 1000&nbsp;г</span>
           </a>
           <table class="catalog__properties">
@@ -171,8 +204,13 @@
         </article>
         <article class="catalog__item">
           <a class="catalog__link-wrapper catalog__link-wrapper--small-icon" href="./404.html">
-            <img class="catalog__item-image" src="./img/catalog-7.jpg" width="72" height="84"
-              alt="«CAT ENERGY» SLIM с рисом 500 грамм за 500 руб.">
+            <div class="catalog__img-wrapper catalog__img-wrapper--small-icon">
+              <picture>
+                <source media="(min-width: 768px)" srcset="../img/catalog/tablet/catalog-7@1x.jpg">
+                <img class="catalog__item-image" src="../img/catalog/mobile/catalog-7@1x.jpg" width="72" height="84"
+                     alt="«CAT ENERGY» SLIM с рисом 500 грамм за 500 руб.">
+              </picture>
+            </div>
             <span class="catalog__item-title">Cat ENERGY SLIM 500&nbsp;г</span>
           </a>
           <table class="catalog__properties">
@@ -248,7 +286,7 @@
   <footer class="footer">
     <section class="footer__contact contact">
       <h2 class="visually-hidden">Как нас найти</h2>
-      <div class="contact__attention-wrapper contact__attention-wrapper--more-space">
+      <div class="contact__attention-wrapper">
         <p class="contact__attention">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="contact__address">
           ул. Большая
@@ -267,7 +305,7 @@
       <a class="footer__logo">
         <img src="./img/logo-text.svg" alt="Лого название «CAT ENERGY»" width="128" height="24">
       </a>
-      <section class="footer__socials socials">
+      <section class="socials">
         <h2 class="visually-hidden">Наши социальные сети</h2>
         <ul class="socials__list">
           <li class="socials__item">
