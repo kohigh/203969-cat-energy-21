@@ -13,6 +13,25 @@
   }
 }
 
+.form__top {
+  display: grid;
+
+  @media (min-width: $mobile-width) {
+    row-gap: 37px;
+    padding: 28px 20px 29px;
+  }
+
+  @media (min-width: $tablet-width) {
+    row-gap: 54px;
+    padding: 33px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 56px;
+    padding: 44px 110px 56px;
+  }
+}
+
 .form__legend {
   @include reset-margin-padding;
 

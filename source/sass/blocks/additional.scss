@@ -2,7 +2,7 @@
   @include block-padding;
 
   position: relative;
-  padding-top: 25px;
+  padding-top: 22px;
 
   @media (min-width: $mobile-width) {
     padding-bottom: 36px;
@@ -42,7 +42,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0 37px;
-    margin-bottom: 78px;
+    margin-bottom: 81px;
   }
 
   @media (min-width: $desktop-width) {

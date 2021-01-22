@@ -6,7 +6,21 @@
 
   @media (min-width: $desktop-width) {
     padding: 0 109px;
-    margin-bottom: 50px;
+    margin-bottom: 53px;
+  }
+}
+
+.catalog__top {
+  @media (min-width: $mobile-width) {
+    padding: 27px 20px 42px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 33px 30px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 45px 110px 71px
   }
 }
 
@@ -42,6 +56,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    background-image: linear-gradient($catalog-background-gr1 119px, $catalog-background-gr2 119px);
+    border: none;
     row-gap: 0;
     width: 324px;
     height: 551px;
@@ -54,6 +70,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    background-image: linear-gradient($catalog-background-gr1 94px, $catalog-background-gr2 94px);
     padding-bottom: 39px;
     width: 245px;
     height: 525px;
@@ -155,7 +172,7 @@
 
 .catalog__property {
   @media (min-width: $tablet-width) {
-    border: 1px none black;
+    border: 1px none $catalog-border;
     border-bottom-style: solid;
   }
 }

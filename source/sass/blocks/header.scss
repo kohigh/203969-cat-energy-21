@@ -6,6 +6,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    height: $header-height-desktop;
     padding: 41px 0 14px;
     display: grid;
     grid-template-columns: 1fr 1fr;

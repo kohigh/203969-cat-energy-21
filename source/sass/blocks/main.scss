@@ -1,33 +1,3 @@
-.main__top {
-  display: grid;
-
-  @media (min-width: $mobile-width) {
-    row-gap: 37px;
-    padding: 29px 20px;
-  }
-
-  @media (min-width: $tablet-width) {
-    row-gap: 54px;
-    padding: 33px 70px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 45px 110px 58px;
-  }
-
-  &--space-after {
-    margin-bottom: 11px;
-
-    @media (min-width: $tablet-width) {
-      padding: 33px 30px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding: 60px 110px;
-    }
-  }
-}
-
 .main__title {
   @include reset-margin-padding;
 

@@ -150,6 +150,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    border-bottom: 1px dashed $black;
     font-size: $font-size-xl;
     line-height: 30px;
   }

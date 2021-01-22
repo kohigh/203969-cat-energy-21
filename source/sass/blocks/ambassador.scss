@@ -1,7 +1,12 @@
 .ambassador {
   background-color: $ambassador-background;
 
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient($catalog-background-gr1 620px, $catalog-background-gr2 620px);
+  }
+
   @media (min-width: $desktop-width) {
+    background-image: linear-gradient($catalog-background-gr1 195px, $catalog-background-gr2 195px);
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 65px;
@@ -129,7 +134,7 @@
 .ambassador__measure {
   @include reset-margin-padding;
 
-  background-color: $ambassador-measure-background;
+  background-color: $ambassador-measure-mobile;
   font-family: $font-additional;
   font-size: $font-size-xs;
   line-height: 12px;
@@ -138,9 +143,14 @@
   padding: 0 10px;
 
   @media (min-width: $tablet-width) {
+    background-color: $ambassador-measure-tablet;
     padding: 0 6px;
     font-size: $font-size-s;
     line-height: $font-size-s;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $ambassador-measure-desktop;
   }
 }
 
