@@ -9,7 +9,6 @@
     background-image: linear-gradient($catalog-background-gr1 195px, $catalog-background-gr2 195px);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 65px;
   }
 }
 
@@ -38,7 +37,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 59px;
     padding-right: 140px;
-    row-gap: 59px;
+    row-gap: 0;
     grid-template-areas:
       "header"
       "results"
@@ -60,8 +59,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    row-gap: 147px;
-    margin-bottom: 10px;
+    row-gap: 116px;
+    margin-bottom: 36px;
   }
 }
 

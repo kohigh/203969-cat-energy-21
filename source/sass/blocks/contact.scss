@@ -30,13 +30,9 @@
     background-color: $contact-background;
   }
 
-  &--more-space {
-    @media (min-width: $tablet-width) {
-      margin-top: 0;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-top: 93px;
+  :not(.page__body--index) & {
+    @media (max-width: $tablet-width) {
+      background-color: $contact-attention-dark;
     }
   }
 }

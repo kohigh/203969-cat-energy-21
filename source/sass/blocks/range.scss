@@ -1,5 +1,6 @@
 .range {
   display: grid;
+  position: relative;
 
   @media (min-width: $mobile-width) {
     padding-top: 43px;
@@ -15,6 +16,24 @@
 
   @media (min-width: $desktop-width) {
     @include reset-margin-padding;
+
+    row-gap: 21px;
+    padding-bottom: 69px;
+  }
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    height: 100%;
+    width: calc(50% + #{$range-after-shift});
+    background-image: linear-gradient($catalog-background-gr1 195px, $range-after 195px);
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
   }
 }
 
@@ -30,14 +49,14 @@
   }
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     width: $ambassador-width-tablet;
     height: 620px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
-    width: 405px;
+    width: 100%;
     height: 536px;
   }
 }
@@ -45,19 +64,27 @@
 .range__img {
   background-repeat: no-repeat;
 
+
   &--before {
     background-image: url("../img/index/mobile/ambassador-before@1x.png");
 
     @media (min-resolution: 2dppx) {
+      @include reset-background;
+
       background-image: url("../img/index/mobile/ambassador-before@2x.png");
     }
 
     @media (min-width: $tablet-width) {
+      @include reset-background;
+
       background-image: url("../img/index/tablet/ambassador-before@1x.png");
       background-position: 100% 64px;
     }
 
     @media (min-width: $desktop-width) {
+      @include reset-background;
+
+      z-index: 3;
       width: 365px;
       background-image: url("../img/index/desktop/ambassador-before@1x.png");
       background-position: 100% 0;
@@ -68,16 +95,20 @@
     display: none;
 
     @media (min-width: $tablet-width) {
+      @include reset-background;
+
       display: block;
       background-image: url("../img/index/tablet/ambassador-after@1x.png");
       background-position: 100% 72px;
     }
 
     @media (min-width: $desktop-width) {
-      width: 325px;
+      @include reset-background;
+
       background-image: url("../img/index/desktop/ambassador-after@1x.png");
-      background-position: 100% 0;
-      margin-left: -40px;
+      background-position: 0 0;
+      margin-left: -#{$range-after-shift};
+      z-index: 2;
     }
   }
 }
@@ -85,6 +116,7 @@
 .range__scale {
   @include reset-margin-padding;
 
+  z-index: 4;
   display: grid;
   align-items: center;
 

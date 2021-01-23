@@ -75,6 +75,11 @@
       display: block;
       top: 26px;
     }
+
+    @media (min-width: $desktop-width) {
+      right: calc(100% - 30px);
+      width: calc(100vw - 100% + 30px);
+    }
   }
 
   &::after {
@@ -96,7 +101,8 @@
 
     @media (min-width: $desktop-width) {
       top: 26px;
-      width: calc(100vw - 100% - 40px);
+      left: calc(100% - 30px);
+      width: calc(100vw - 100% - 10px);
     }
   }
 }

@@ -112,12 +112,16 @@
     grid-template-columns: auto 1fr;
     align-content: space-evenly;
     height: 139px;
+    border: 1px solid $additional-item-border;
+    border-top: none;
   }
 
   @media (min-width: $desktop-width) {
     @include reset-margin-padding;
 
     height: 72px;
+    border: none;
+    border-bottom: 1px solid $additional-item-border;
     align-items: center;
     grid-template-columns: 284px auto 244px;
     grid-template-areas: "title spec button";
@@ -209,7 +213,7 @@
 .additional__promo {
   position: relative;
   height: 289px;
-  background: url("../../img/catalog-promo.jpg") no-repeat;
+  background: url("../img/catalog/mobile/additional-promo@1x.jpg") no-repeat;
   background-size: 100%;
   color: $additional__promo-text;
   font-family: $font-additional;
@@ -219,6 +223,9 @@
   padding: 42px;
 
   @media (min-width: $tablet-width) {
+    @include reset-background;
+
+    background: url("../img/catalog/tablet/additional-promo@1x.jpg") no-repeat;
     height: 200px;
     padding: 72px 125px;
     display: grid;
@@ -232,7 +239,7 @@
     padding: 40px;
     width: 245px;
     height: 100%;
-    background-size: auto;
+    background: url("../img/catalog/desktop/additional-promo@1x.jpg") no-repeat;
   }
 
   &::before {
@@ -240,7 +247,7 @@
     position: absolute;
     top: 58px;
     left: 100px;
-    background-image: url("../../img/additional-promo.svg");
+    background-image: url("../img/icons/gift.svg");
     width: 78px;
     height: 80px;
 

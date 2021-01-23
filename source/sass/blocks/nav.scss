@@ -35,10 +35,8 @@
   }
 
   &:last-child {
-    border-bottom: 2px solid $nav-border;
-
-    @media (min-width: $tablet-width) {
-      border: none;
+    @media (max-width: $tablet-width - 1) {
+      border-bottom: 2px solid $nav-border;
     }
   }
 
@@ -46,7 +44,9 @@
     @media (min-width: $tablet-width) {
       border-bottom: 2px solid $nav-active-tablet;
     }
+  }
 
+  .page__body--index &--active {
     @media (min-width: $desktop-width) {
       border-bottom: 2px solid $nav-active-desktop;
     }
@@ -63,14 +63,14 @@
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 10px 0;
+    padding: 8px 0;
     font-size: $font-size-l;
     line-height: 22px;
     letter-spacing: -0.4px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 6px 0;
+    padding: 7px 0;
     font-size: $font-size-xl;
     line-height: 30px;
   }
