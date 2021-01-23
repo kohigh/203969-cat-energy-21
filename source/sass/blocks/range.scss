@@ -64,7 +64,6 @@
 .range__img {
   background-repeat: no-repeat;
 
-
   &--before {
     background-image: url("../img/index/mobile/ambassador-before@1x.png");
 
@@ -79,6 +78,13 @@
 
       background-image: url("../img/index/tablet/ambassador-before@1x.png");
       background-position: 100% 64px;
+
+      @media (min-resolution: 2dppx) {
+        @include reset-background;
+
+        background-image: url("../img/index/tablet/ambassador-before@2x.png");
+        background-position: 100% 64px;
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -87,7 +93,16 @@
       z-index: 3;
       width: 365px;
       background-image: url("../img/index/desktop/ambassador-before@1x.png");
-      background-position: 100% 0;
+      background-position: 94% -1px;
+      background-size: 112%;
+
+      @media (min-resolution: 2dppx) {
+        @include reset-background;
+
+        background-image: url("../img/index/desktop/ambassador-before@2x.png");
+        background-position: 94% -1px;
+        background-size: 112%;
+      }
     }
   }
 
@@ -100,6 +115,13 @@
       display: block;
       background-image: url("../img/index/tablet/ambassador-after@1x.png");
       background-position: 100% 72px;
+
+      @media (min-resolution: 2dppx) {
+        @include reset-background;
+
+        background-image: url("../img/index/tablet/ambassador-after@2x.png");
+        background-position: 100% 72px;
+      }
     }
 
     @media (min-width: $desktop-width) {
@@ -107,8 +129,17 @@
 
       background-image: url("../img/index/desktop/ambassador-after@1x.png");
       background-position: 0 0;
+      background-size: 83%;
       margin-left: -#{$range-after-shift};
       z-index: 2;
+
+      @media (min-resolution: 2dppx) {
+        @include reset-background;
+
+        background-image: url("../img/index/desktop/ambassador-after@2x.png");
+        background-position: 0 0;
+        background-size: 83%;
+      }
     }
   }
 }

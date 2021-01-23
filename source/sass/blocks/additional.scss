@@ -213,8 +213,6 @@
 .additional__promo {
   position: relative;
   height: 289px;
-  background: url("../img/catalog/mobile/additional-promo@1x.jpg") no-repeat;
-  background-size: 100%;
   color: $additional__promo-text;
   font-family: $font-additional;
   font-size: $font-size-m;
@@ -222,24 +220,49 @@
   align-items: flex-end;
   padding: 42px;
 
+  @media (min-width: $mobile-width) {
+    @include reset-background;
+
+    background-image: url("../img/catalog/mobile/additional-promo@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      @include reset-background;
+
+      background-image: url("../img/catalog/mobile/additional-promo@2x.jpg");
+    }
+  }
+
   @media (min-width: $tablet-width) {
     @include reset-background;
 
-    background: url("../img/catalog/tablet/additional-promo@1x.jpg") no-repeat;
+    background-image: url("../img/catalog/tablet/additional-promo@1x.jpg");
     height: 200px;
     padding: 72px 125px;
     display: grid;
     grid-template-columns: min-content;
     justify-content: end;
+
+    @media (min-resolution: 2dppx) {
+      @include reset-background;
+
+      background-image: url("../img/catalog/tablet/additional-promo@2x.jpg");
+    }
   }
 
   @media (min-width: $desktop-width) {
     @include reset-margin-padding;
+    @include reset-background;
 
     padding: 40px;
     width: 245px;
     height: 100%;
-    background: url("../img/catalog/desktop/additional-promo@1x.jpg") no-repeat;
+    background-image: url("../img/catalog/desktop/additional-promo@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      @include reset-background;
+
+      background-image: url("../img/catalog/desktop/additional-promo@2x.jpg");
+    }
   }
 
   &::before {

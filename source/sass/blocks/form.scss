@@ -297,6 +297,8 @@
 
   @media (min-width: $desktop-width) {
     @include reset-margin-padding;
+
+    padding-right: 71px;
   }
 }
 

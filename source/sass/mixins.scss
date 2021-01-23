@@ -24,6 +24,7 @@
 
 @mixin reset-background {
   background: none no-repeat;
+  background-size: 100%;
 }
 
 @mixin default-link {
