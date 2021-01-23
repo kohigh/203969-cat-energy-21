@@ -68,7 +68,6 @@
 
     @media (min-width: $mobile-width) {
       display: none;
-      top: 16px;
     }
 
     @media (min-width: $tablet-width) {
@@ -91,7 +90,7 @@
     background-color: $green-apple;
 
     @media (min-width: $mobile-width) {
-      top: 16px;
+      top: 17px;
     }
 
     @media (min-width: $tablet-width) {
@@ -110,7 +109,13 @@
 .form__label {
   @include form-text;
 
-  margin-right: 10px;
+  @media (min-width: $mobile-width) {
+    margin-right: 11px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 14px;
+  }
 
   &--radio {
     color: $radio-color;
@@ -173,6 +178,11 @@
     width: 20px;
     height: 15px;
     background-image: url("../img/icons/email.svg");
+
+    @media (min-width: $desktop-width) {
+      top: 19px;
+      right: 22px;
+    }
   }
 
   &--phone::after {
@@ -357,7 +367,7 @@
   display: grid;
 
   @media (min-width: $mobile-width) {
-    padding-top: 33px;
+    padding-top: 34px;
     row-gap: 13px;
     margin-bottom: 27px;
   }
@@ -423,8 +433,11 @@
 .form__bottom {
   grid-area: submit;
   text-align: center;
-  padding: 0 20px;
-  margin-bottom: 31px;
+
+  @media (min-width: $mobile-width) {
+    padding: 0 20px;
+    margin-bottom: 32px;
+  }
 
   @media (min-width: $tablet-width) {
     padding: 17px 71px 41px;

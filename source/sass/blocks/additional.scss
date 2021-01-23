@@ -104,7 +104,7 @@
   @media (min-width: $tablet-width) {
     @include reset-margin-padding;
 
-    padding: 0 40px;
+    padding: 0 38px;
     row-gap: 0;
     grid-template-areas:
       "title spec"
