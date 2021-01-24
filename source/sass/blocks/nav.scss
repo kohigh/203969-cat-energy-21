@@ -51,11 +51,32 @@
       border-bottom: 2px solid $nav-active-desktop;
     }
   }
+
+  &:not(&--active):hover {
+    color: $black06;
+  }
+
+  &:not(&--active):active {
+    color: $black03;
+  }
+
+  .page__body--index & {
+    color: $white;
+  }
+
+  .page__body--index &:not(&--active):hover {
+    color: $white06;
+  }
+
+  .page__body--index &:not(&--active):active {
+    color: $white03;
+  }
 }
 
 .nav__routes-link {
   @include default-link;
 
+  color: inherit;
   display: inline-block;
   font-family: $font-main;
   font-weight: $font-bold;

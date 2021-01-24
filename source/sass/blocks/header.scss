@@ -36,6 +36,18 @@
   }
 }
 
+.header__logo {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .header__logo-img {
   @media (min-width: $mobile-width) {
     width: 191px;
@@ -65,6 +77,7 @@
   cursor: pointer;
   border: none;
   background-color: inherit;
+  outline-offset: 4px;
 
   .header &::before {
     content: "";

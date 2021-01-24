@@ -42,6 +42,17 @@
 }
 
 .socials__icon {
+  fill: $black;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    fill: #68b738;
+    opacity: 0.3;
+  }
+
   &--vk {
     @media (min-width: $tablet-width) {
       width: 30px;
@@ -50,6 +61,8 @@
   }
 
   &--ig {
+    fill: #666666;
+
     @media (min-width: $tablet-width) {
       width: 23px;
       height: 23px;
@@ -57,6 +70,14 @@
   }
 
   &--fb {
+    fill: none;
+    stroke: #666666;
+
+    &:hover {
+      fill: none;
+      stroke: #68b738;
+    }
+
     @media (min-width: $tablet-width) {
       width: 28px;
       height: 33px;

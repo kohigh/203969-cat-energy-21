@@ -19,14 +19,22 @@
 }
 
 .footer__logo {
-  padding-top: 39px;
-  padding-bottom: 28px;
+  margin: 39px auto 28px;
   text-align: center;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     @include reset-margin-padding;
 
     margin-right: 20px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -34,6 +42,8 @@
   @include reset-margin-padding;
 
   display: flex;
+  color: $black;
+  text-decoration: none;
   justify-content: space-between;
   align-items: center;
   font-family: $font-additional;
@@ -48,6 +58,18 @@
   }
 }
 
+.footer__copyright:active {
+  opacity: 0.3;
+}
+
 .footer__copyright-name {
   margin-right: 23px;
+}
+
+.footer__copyright:hover .footer__copyright-logo {
+  fill: #68b738;
+}
+
+.footer__copyright:active .footer__copyright-logo {
+  fill: #68b738;
 }
