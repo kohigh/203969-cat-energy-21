@@ -12,23 +12,15 @@ toggle.addEventListener(
   (e) => { header.classList.toggle('header--opened') }
 )
 
-let rangeMin = document.querySelector('#range__min')
-let rangeMax = document.querySelector('#range__max')
-let rangeBefore = document.querySelector('#range-before')
-let rangeAfter = document.querySelector('#range-after')
+let range = document.querySelector('.range__input')
+let imgBefore = document.querySelector('.range__img--before')
+let imgAfter = document.querySelector('.range__img--after')
 
-rangeMax.addEventListener(
-  'click',
-  () => {
-    rangeBefore.style.display = 'none';
-    rangeAfter.style.display = 'block';
-  }
-)
-
-rangeMin.addEventListener(
-  'click',
-  () => {
-    rangeBefore.style.display = 'block';
-    rangeAfter.style.display = 'none';
+range.addEventListener(
+  'change',
+  (e) => {
+    imgBefore.style.width = `${e.target.value}%`
+    imgAfter.style.width = `${100 - e.target.value}%`
+    imgAfter.style.left = `${e.target.value}%`
   }
 )

@@ -1,272 +1,30 @@
 .range {
-  display: grid;
-  position: relative;
-
-  @media (min-width: $mobile-width) {
-    padding-top: 43px;
-    padding-bottom: 30px;
-    row-gap: 26px;
-  }
-
-  @media (min-width: $tablet-width) {
-    @include reset-margin-padding;
-    row-gap: 0;
-    padding-bottom: 67px;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include reset-margin-padding;
-
-    row-gap: 21px;
-    padding-bottom: 69px;
-  }
-
-  &::after {
-    display: none;
-    content: "";
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    height: 100%;
-    width: calc(50% + #{$range-after-shift});
-    background-image: linear-gradient($catalog-background-gr1 195px, $range-after 195px);
-
-    @media (min-width: $desktop-width) {
-      display: block;
-    }
-  }
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .range__img-container {
-  @include reset-margin-padding;
-
-  display: grid;
   position: relative;
-
-  @media (min-width: $mobile-width) {
-    width: $ambassador-width-mobile;
-    margin: 0 auto;
-    height: 232px;
-  }
-
-  @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr 1fr;
-    width: $ambassador-width-tablet;
-    height: 620px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0;
-    width: 100%;
-    height: 536px;
-  }
+  width: 768px;
+  height: 600px;
 }
 
 .range__img {
-  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+
+  background-size: 768px 100%;
 
   &--before {
-    background-image: url("../img/index/mobile/ambassador-before@1x.png");
-
-    @media (min-resolution: 2dppx) {
-      @include reset-background;
-
-      background-image: url("../img/index/mobile/ambassador-before@2x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      @include reset-background;
-
-      background-image: url("../img/index/tablet/ambassador-before@1x.png");
-      background-position: 100% 64px;
-
-      @media (min-resolution: 2dppx) {
-        @include reset-background;
-
-        background-image: url("../img/index/tablet/ambassador-before@2x.png");
-        background-position: 100% 64px;
-      }
-    }
-
-    @media (min-width: $desktop-width) {
-      @include reset-background;
-
-      z-index: 3;
-      width: 365px;
-      background-image: url("../img/index/desktop/ambassador-before@1x.png");
-      background-position: 94% -1px;
-      background-size: 112%;
-
-      @media (min-resolution: 2dppx) {
-        @include reset-background;
-
-        background-image: url("../img/index/desktop/ambassador-before@2x.png");
-        background-position: 94% -1px;
-        background-size: 112%;
-      }
-    }
+    background-image: url("../img/index/mobile/ambassador-before.png");
   }
 
   &--after {
-    height: 100%;
-    width: 100%;
-
-    @media (max-width: $tablet-width - 1) {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-size: 76%;
-      background-position: center;
-      background-image: url("../img/index/mobile/ambassador-after@1x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      @include reset-background;
-
-      display: block;
-      background-image: url("../img/index/tablet/ambassador-after@1x.png");
-      background-position: 100% 72px;
-
-      @media (min-resolution: 2dppx) {
-        @include reset-background;
-
-        background-image: url("../img/index/tablet/ambassador-after@2x.png");
-        background-position: 100% 72px;
-      }
-    }
-
-    @media (min-width: $desktop-width) {
-      @include reset-background;
-
-      background-image: url("../img/index/desktop/ambassador-after@1x.png");
-      background-position: 0 0;
-      background-size: 83%;
-      margin-left: -#{$range-after-shift};
-      z-index: 2;
-
-      @media (min-resolution: 2dppx) {
-        @include reset-background;
-
-        background-image: url("../img/index/desktop/ambassador-after@2x.png");
-        background-position: 0 0;
-        background-size: 83%;
-      }
-    }
+    background-image: url("../img/index/mobile/ambassador-after.png");
+    left: 50%;
+    background-position: 100%;
   }
-}
-
-.range__scale {
-  @include reset-margin-padding;
-
-  z-index: 4;
-  display: grid;
-  align-items: center;
-
-  @media (min-width: $mobile-width) {
-    grid-template-columns: min-content 1fr min-content;
-    padding-left: 58px;
-    padding-right: 53px;
-    column-gap: 12px;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 600px;
-    padding-left: 98px;
-    column-gap: 22px;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include reset-margin-padding;
-
-    padding: 0 40px;
-  }
-}
-
-.range__bar {
-  margin-right: 15px;
-  position: relative;
-  width: 100%;
-  height: 14px;
-  background-color: $range-background;
-  border: 1px solid $range-border;
-  border-radius: 6px;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
-.range__progress {
-  position: absolute;
-  left: 5px;
-  top: 3px;
-  width: 43%;
-  height: 6px;
-  background-color: $range-progress;
-  border-radius: 6px;
-}
-
-.range__button {
-  @include reset-margin-padding;
-
-  background-color: inherit;
-  border: none;
-  font-family: $font-main;
-  font-weight: $font-regular;
-  text-transform: uppercase;
-
-  @media (min-width: $mobile-width) {
-    padding: 6px;
-    font-size: $font-size-m;
-    line-height: 20px;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 0;
-    border-bottom: 1px dashed $black;
-    font-size: $font-size-xl;
-    line-height: 30px;
-  }
-}
-
-.range__input-label {
-  display: none;
-
-  @media (min-width: $tablet-width) {
-    @include reset-margin-padding;
-
-    display: block;
-  }
-}
-
-.range__input {
-  margin-right: 15px;
-  width: 428px;
-  height: 6px;
-  background-color: $range-scale;
-
-  @media (min-width: $tablet-width) {
-    @include reset-margin-padding;
-  }
-}
-
-.range__input[type="range"]::-webkit-slider-runnable-track {
-  background: $range-scale;
-  border-radius: 6px;
-  height: 6px;
-}
-
-.range__input[type="range"] {
-  appearance: none;
-}
-
-.range__input[type="range"]::-webkit-slider-thumb {
-  height: 34px;
-  width: 34px;
-  border-radius: 50%;
-  background: $range-toggle;
-  cursor: pointer;
-  appearance: none;
-  margin-top: -14px;
 }
