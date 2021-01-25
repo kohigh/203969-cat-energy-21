@@ -41,6 +41,7 @@
   @include reset-margin-padding;
 
   display: grid;
+  position: relative;
 
   @media (min-width: $mobile-width) {
     width: $ambassador-width-mobile;
@@ -107,7 +108,18 @@
   }
 
   &--after {
-    display: none;
+    height: 100%;
+    width: 100%;
+
+    @media (max-width: $tablet-width - 1) {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: 76%;
+      background-position: center;
+      background-image: url("../img/index/mobile/ambassador-after@1x.png");
+    }
 
     @media (min-width: $tablet-width) {
       @include reset-background;

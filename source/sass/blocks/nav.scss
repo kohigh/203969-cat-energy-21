@@ -61,7 +61,9 @@
   }
 
   .page__body--index & {
-    color: $white;
+    @media (min-width: $tablet-width) {
+      color: $white;
+    }
   }
 
   .page__body--index &:not(&--active):hover {
