@@ -51,28 +51,6 @@
       border-bottom: 2px solid $nav-active-desktop;
     }
   }
-
-  &:not(&--active):hover {
-    color: $black06;
-  }
-
-  &:not(&--active):active {
-    color: $black03;
-  }
-
-  .page__body--index & {
-    @media (min-width: $desktop-width) {
-      color: $white;
-    }
-  }
-
-  .page__body--index &:not(&--active):hover {
-    color: $white06;
-  }
-
-  .page__body--index &:not(&--active):active {
-    color: $white03;
-  }
 }
 
 .nav__routes-link {
@@ -96,5 +74,27 @@
     padding: 7px 0;
     font-size: $font-size-xl;
     line-height: 30px;
+  }
+
+  &[href]:not(&--active):hover {
+    color: $black06;
+  }
+
+  &[href]:not(&--active):active {
+    color: $black03;
+  }
+
+  .page__body--index & {
+    @media (min-width: $desktop-width) {
+      color: $white;
+    }
+  }
+
+  .page__body--index &:not(&--active):hover {
+    color: $white06;
+  }
+
+  .page__body--index &:not(&--active):active {
+    color: $white03;
   }
 }

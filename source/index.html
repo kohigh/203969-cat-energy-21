@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body page__body--index">
-  <header id="header" class="header header--no-js">
+  <header class="header header--no-js">
     <div class="header__top">
       <a class="header__logo">
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="header__logo-img" src="img/logo-mobile.svg" alt="Лого название «CAT ENERGY»" width="191" height="38">
+          <source media="(min-width: 1440px)" srcset="./img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+          <img class="header__logo-img" src="./img/logo-mobile.svg" alt="Лого название «CAT ENERGY»" width="191" height="38">
         </picture>
       </a>
-      <button id="menu-toggle" class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
     <div class="header__nav-wrapper">
       <nav class="nav">
@@ -43,12 +43,12 @@
       <div class="hero__img-wrapper">
         <picture>
           <source media="(min-width: 1440px)"
-                  srcset="img/index/desktop/hero-promo@1x.png, img/index/desktop/hero-promo@2x.png 2x">
+                  srcset="./img/index/desktop/hero-promo@1x.png, img/index/desktop/hero-promo@2x.png 2x">
           <source media="(min-width: 768px)"
-                  srcset="img/index/tablet/hero-promo@1x.png 1x, img/index/tablet/hero-promo@2x.png 2x">
+                  srcset="./img/index/tablet/hero-promo@1x.png 1x, img/index/tablet/hero-promo@2x.png 2x">
           <img
-            src="img/index/mobile/hero-promo@1x.png"
-            srcset="img/index/mobile/hero-promo@2x.png 2x"
+            src="./img/index/mobile/hero-promo@1x.png"
+            srcset="./img/index/mobile/hero-promo@2x.png 2x"
             class="hero__promo-img"
             alt="«CAT ENERGY» PRO 0% Natural с курицей 500 грамм">
         </picture>
@@ -121,26 +121,26 @@
             по&#8209;прежнему спит по 16 часов в день.
           </p>
         </div>
-        <dl class="ambassador__results">
+        <div class="ambassador__results">
           <div class="ambassador__border-wrapper">
-            <div class="ambassador__result-wrapper">
+            <dl class="ambassador__result-wrapper">
               <dt class="ambassador__result">
                 5&nbsp;кг
               </dt>
               <dd class="ambassador__measure">
                 Снижение веса
               </dd>
-            </div>
+            </dl>
           </div>
           <div class="ambassador__border-wrapper">
-            <div class="ambassador__result-wrapper">
+            <dl class="ambassador__result-wrapper">
               <dt class="ambassador__result">
                 60&nbsp;дней
               </dt>
               <dd class="ambassador__measure">Затрачено времени</dd>
-            </div>
+            </dl>
           </div>
-        </dl>
+        </div>
         <p class="ambassador__expenses">
           <span class="ambassador__expenses-key">Затраты на питание:</span>
           <span class="ambassador__expenses-value">15 000 руб.</span>
@@ -185,7 +185,7 @@
     <div class="footer__bottom-wrapper">
       <a class="footer__logo">
         <svg class="footer__logo-img" width="128" height="24">
-          <use xlink:href="img/icons.svg#logo-text"></use>
+          <use xlink:href="./img/icons.svg#logo-text"></use>
         </svg>
       </a>
       <section class="socials">
@@ -195,7 +195,7 @@
               <a href="https://via.placeholder.com/vk">
                 <span class="visually-hidden">ВКонтакте</span>
                 <svg class="socials__icon socials__icon--vk" width="23" height="16">
-                  <use xlink:href="img/icons.svg#socials-vk"></use>
+                  <use xlink:href="./img/icons.svg#socials-vk"></use>
                 </svg>
               </a>
             </li>
@@ -203,7 +203,7 @@
               <a href="https://via.placeholder.com/ig">
                 <span class="visually-hidden">Инстаграм</span>
                 <svg class="socials__icon socials__icon--ig" width="16" height="16">
-                  <use xlink:href="img/icons.svg#socials-ig"></use>
+                  <use xlink:href="./img/icons.svg#socials-ig"></use>
                 </svg>
               </a>
             </li>
@@ -211,7 +211,7 @@
               <a href="https://via.placeholder.com/fb">
                 <span class="visually-hidden">Фейсбук</span>
                 <svg class="socials__icon socials__icon--fb" width="22" height="22">
-                  <use xlink:href="img/icons.svg#socials-fb"></use>
+                  <use xlink:href="./img/icons.svg#socials-fb"></use>
                 </svg>
               </a>
             </li>
@@ -220,7 +220,7 @@
       <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss">
         <span class="footer__copyright-name">HTML Academy</span>
         <svg class="footer__copyright-logo" width="27" height="34">
-          <use xlink:href="img/icons.svg#footer-copyright"></use>
+          <use xlink:href="./img/icons.svg#footer-copyright"></use>
         </svg>
       </a>
     </div>

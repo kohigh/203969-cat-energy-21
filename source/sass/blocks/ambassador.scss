@@ -89,6 +89,7 @@
 }
 
 .ambassador__border-wrapper {
+  @include reset-margin-padding;
   width: 124px;
   height: 56px;
   margin-right: 32px;
@@ -109,12 +110,14 @@
 }
 
 .ambassador__result-wrapper {
+  @include reset-margin-padding;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .ambassador__result {
+  @include reset-margin-padding;
   margin-bottom: 8px;
   font-family: $font-main;
   font-weight: $font-regular;

@@ -4,8 +4,8 @@ for (let el of elements) {
   el.classList.forEach(className => className.includes('--no-js') && el.classList.remove(className) )
 }
 
-let toggle = document.querySelector('#menu-toggle')
-let header = document.querySelector('#header')
+let toggle = document.querySelector('.header__toggle')
+let header = document.querySelector('.header')
 
 toggle.addEventListener(
   'click',
