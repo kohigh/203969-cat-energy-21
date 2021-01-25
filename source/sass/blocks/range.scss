@@ -1,4 +1,8 @@
 .range {
+  @media (min-width: $mobile-width) {
+    padding-bottom: 30px;
+  }
+
   @media (min-width: $tablet-width) {
     padding-bottom: 69px;
   }
@@ -7,10 +11,21 @@
 .range__img-container {
   position: relative;
 
+  @media (min-width: $mobile-width) {
+    width: 311px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
   @media (min-width: $tablet-width) {
     width: 768px;
     height: 600px;
     margin-bottom: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 500px;
+    margin-bottom: 57px;
   }
 }
 
@@ -18,12 +33,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
   height: 100%;
   background-repeat: no-repeat;
 
+  @media (min-width: $mobile-width) {
+    width: 100%;
+    background-size: 100%;
+    background-position: 100%;
+  }
+
   @media (min-width: $tablet-width) {
+    width: 50%;
     background-size: $tablet-width 100%;
+    background-position: 0;
   }
 
   &--before {
@@ -32,8 +54,15 @@
 
   &--after {
     background-image: url("../img/index/mobile/ambassador-after.png");
-    left: 50%;
-    background-position: 100%;
+
+    @media (max-width: $tablet-width - 1px) {
+      display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      left: 50%;
+      background-position: 100%;
+    }
   }
 }
 
@@ -42,9 +71,28 @@
   grid-template-columns: min-content 1fr min-content;
   align-items: center;
 
+  @media (min-width: $mobile-width) {
+    padding: 0 53px 0 58px;
+    column-gap: 12px;
+  }
+
   @media (min-width: $tablet-width) {
     column-gap: 19px;
     padding: 0 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 111px 0 87px;
+  }
+}
+
+.range__input-label {
+  @media (min-width: $mobile-width) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
 
@@ -65,8 +113,30 @@
 }
 
 .range__bar {
+  position: relative;
+  height: 14px;
+  width: 100%;
+  background-color: $range-background;
+  border: 1px solid $range-border;
+  border-radius: 6px;
+
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.range__progress {
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 43%;
+  height: 6px;
+  background-color: $range-progress;
+  border-radius: 6px;
+
+  &--after {
+    right: 5px;
+    left: initial;
   }
 }
 
