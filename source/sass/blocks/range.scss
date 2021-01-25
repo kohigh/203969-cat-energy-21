@@ -1,12 +1,17 @@
 .range {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  @media (min-width: $tablet-width) {
+    padding-bottom: 69px;
+  }
 }
 
 .range__img-container {
   position: relative;
-  width: 768px;
-  height: 600px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 600px;
+    margin-bottom: 17px;
+  }
 }
 
 .range__img {
@@ -15,8 +20,11 @@
   left: 0;
   width: 50%;
   height: 100%;
+  background-repeat: no-repeat;
 
-  background-size: 768px 100%;
+  @media (min-width: $tablet-width) {
+    background-size: $tablet-width 100%;
+  }
 
   &--before {
     background-image: url("../img/index/mobile/ambassador-before.png");
@@ -26,5 +34,61 @@
     background-image: url("../img/index/mobile/ambassador-after.png");
     left: 50%;
     background-position: 100%;
+  }
+}
+
+.range__scale {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 19px;
+    padding: 0 100px;
+  }
+}
+
+.range__input {
+  @include reset-margin-padding;
+
+  width: 100%;
+  appearance: none;
+  height: 6px;
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    background-image: url("../img/icons/slider-toggle.svg");
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.range__bar {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.range__button {
+  @include reset-margin-padding;
+
+  background-color: inherit;
+  border: none;
+  font-family: $font-main;
+  font-weight: $font-regular;
+  text-transform: uppercase;
+
+  @media (min-width: $mobile-width) {
+    padding: 6px;
+    font-size: $font-size-m;
+    line-height: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    border-bottom: 1px dashed $black;
+    font-size: $font-size-xl;
+    line-height: 30px;
   }
 }
