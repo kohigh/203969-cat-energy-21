@@ -224,6 +224,7 @@
     @include reset-background;
 
     background-image: url("../img/catalog/mobile/additional-promo@1x.jpg");
+    background-position: center;
 
     @media (min-resolution: 2dppx) {
       @include reset-background;
@@ -269,7 +270,7 @@
     content: "";
     position: absolute;
     top: 58px;
-    left: 100px;
+    left: 36%;
     background-image: url("../img/icons/gift.svg");
     width: 78px;
     height: 80px;

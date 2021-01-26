@@ -65,6 +65,10 @@
       "button";
   }
 
+  @media (max-width: $desktop-width - 1px) {
+    margin: 0 auto;
+  }
+
   @media (min-width: $desktop-width) {
     background-image: linear-gradient($catalog-background-gr1 94px, $catalog-background-gr2 94px);
     padding-bottom: 39px;
@@ -254,7 +258,7 @@
 
     @media (min-width: $mobile-width) {
       top: 17px;
-      left: 124px;
+      left: 44%;
       width: 30px;
     }
 

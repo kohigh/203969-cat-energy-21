@@ -213,6 +213,10 @@
   &::placeholder {
     @include form-text;
   }
+
+  .form__error &:invalid {
+    border: 2px solid $form-error;
+  }
 }
 
 .form__radio:focus + .form__label,
