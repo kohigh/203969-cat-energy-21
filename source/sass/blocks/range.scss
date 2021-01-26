@@ -1,121 +1,193 @@
 .range {
+  display: grid;
+  position: relative;
+
   @media (min-width: $mobile-width) {
+    padding-top: 43px;
     padding-bottom: 30px;
+    row-gap: 26px;
   }
 
   @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+    row-gap: 0;
+    padding-bottom: 67px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include reset-margin-padding;
+
+    row-gap: 21px;
     padding-bottom: 69px;
+  }
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    height: 100%;
+    width: calc(50% + #{$range-after-shift});
+    background-image: linear-gradient($catalog-background-gr1 195px, $range-after 195px);
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
   }
 }
 
 .range__img-container {
+  @include reset-margin-padding;
+
+  display: grid;
   position: relative;
 
   @media (min-width: $mobile-width) {
-    width: 311px;
-    height: 300px;
+    width: $ambassador-width-mobile;
     margin: 0 auto;
+    height: 232px;
   }
 
   @media (min-width: $tablet-width) {
-    width: 768px;
-    height: 600px;
-    margin-bottom: 17px;
+    grid-template-columns: 1fr 1fr;
+    width: $ambassador-width-tablet;
+    height: 620px;
   }
 
   @media (min-width: $desktop-width) {
-    height: 500px;
-    margin-bottom: 57px;
+    margin: 0;
+    width: 100%;
+    height: 536px;
   }
 }
 
 .range__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
   background-repeat: no-repeat;
 
-  @media (min-width: $mobile-width) {
-    width: 100%;
-    background-size: 100%;
-    background-position: 100%;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 50%;
-    background-size: $tablet-width 100%;
-    background-position: 0;
-  }
-
   &--before {
-    background-image: url("../img/index/mobile/ambassador-before.png");
-  }
+    background-image: url("../img/index/mobile/ambassador-before@1x.png");
 
-  &--after {
-    background-image: url("../img/index/mobile/ambassador-after.png");
+    @media (min-resolution: 2dppx) {
+      @include reset-background;
 
-    @media (max-width: $tablet-width - 1px) {
-      display: none;
+      background-image: url("../img/index/mobile/ambassador-before@2x.png");
     }
 
     @media (min-width: $tablet-width) {
-      left: 50%;
-      background-position: 100%;
+      @include reset-background;
+
+      background-image: url("../img/index/tablet/ambassador-before@1x.png");
+      background-position: 100% 64px;
+
+      @media (min-resolution: 2dppx) {
+        @include reset-background;
+
+        background-image: url("../img/index/tablet/ambassador-before@2x.png");
+        background-position: 100% 64px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      @include reset-background;
+
+      z-index: 3;
+      width: 365px;
+      background-image: url("../img/index/desktop/ambassador-before@1x.png");
+      background-position: 100% 1px;
+      background-size: 111%;
+
+      @media (min-resolution: 2dppx) {
+        @include reset-background;
+
+        background-image: url("../img/index/desktop/ambassador-before@2x.png");
+        background-position: 94% -1px;
+        background-size: 112%;
+      }
+    }
+  }
+
+  &--after {
+    height: 100%;
+    width: 100%;
+
+    @media (max-width: $tablet-width - 1) {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-size: 76%;
+      background-position: center;
+      background-image: url("../img/index/mobile/ambassador-after@1x.png");
+    }
+
+    @media (min-width: $tablet-width) {
+      @include reset-background;
+
+      display: block;
+      background-image: url("../img/index/tablet/ambassador-after@1x.png");
+      background-position: 100% 72px;
+
+      @media (min-resolution: 2dppx) {
+        @include reset-background;
+
+        background-image: url("../img/index/tablet/ambassador-after@2x.png");
+        background-position: 100% 72px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      @include reset-background;
+
+      background-image: url("../img/index/desktop/ambassador-after@1x.png");
+      background-position: 0 5px;
+      background-size: 91%;
+      margin-left: -#{$range-after-shift};
+      z-index: 2;
+
+      @media (min-resolution: 2dppx) {
+        @include reset-background;
+
+        background-image: url("../img/index/desktop/ambassador-after@2x.png");
+        background-position: 0 0;
+        background-size: 83%;
+      }
     }
   }
 }
 
 .range__scale {
+  @include reset-margin-padding;
+
+  z-index: 4;
   display: grid;
-  grid-template-columns: min-content 1fr min-content;
   align-items: center;
 
   @media (min-width: $mobile-width) {
-    padding: 0 53px 0 58px;
+    grid-template-columns: min-content 1fr min-content;
+    padding-left: 58px;
+    padding-right: 53px;
     column-gap: 12px;
   }
 
   @media (min-width: $tablet-width) {
-    column-gap: 19px;
-    padding: 0 100px;
+    width: 600px;
+    padding-left: 98px;
+    column-gap: 22px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 111px 0 87px;
-  }
-}
+    @include reset-margin-padding;
 
-.range__input-label {
-  @media (min-width: $mobile-width) {
-    display: none;
-  }
-
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
-}
-
-.range__input {
-  @include reset-margin-padding;
-
-  width: 100%;
-  appearance: none;
-  height: 6px;
-
-  &::-webkit-slider-thumb {
-    appearance: none;
-    background-image: url("../img/icons/slider-toggle.svg");
-    background-repeat: no-repeat;
-    width: 45px;
-    height: 45px;
+    padding: 0 40px;
   }
 }
 
 .range__bar {
+  margin-right: 15px;
   position: relative;
-  height: 14px;
   width: 100%;
+  height: 14px;
   background-color: $range-background;
   border: 1px solid $range-border;
   border-radius: 6px;
@@ -133,11 +205,6 @@
   height: 6px;
   background-color: $range-progress;
   border-radius: 6px;
-
-  &--after {
-    right: 5px;
-    left: initial;
-  }
 }
 
 .range__button {
@@ -161,4 +228,45 @@
     font-size: $font-size-xl;
     line-height: 30px;
   }
+}
+
+.range__input-label {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+
+    display: block;
+  }
+}
+
+.range__input {
+  margin-right: 15px;
+  width: 428px;
+  height: 6px;
+  background-color: $range-scale;
+
+  @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+  }
+}
+
+.range__input[type="range"]::-webkit-slider-runnable-track {
+  background: $range-scale;
+  border-radius: 6px;
+  height: 6px;
+}
+
+.range__input[type="range"] {
+  appearance: none;
+}
+
+.range__input[type="range"]::-webkit-slider-thumb {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  background: $range-toggle;
+  cursor: pointer;
+  appearance: none;
+  margin-top: -14px;
 }
