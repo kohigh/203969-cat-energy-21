@@ -5,7 +5,7 @@
   border: none;
 
   @media (min-width: $tablet-width) {
-    padding: 0 30px;
+    padding: 0 $fieldset-padding-tablet;
   }
 
   @media (min-width: $desktop-width) {
@@ -30,29 +30,5 @@
 
   &--additional {
     grid-area: additional;
-  }
-}
-
-.fieldset__top {
-  @include block-padding;
-
-  display: inline-block;
-  background-color: $fieldset-background;
-
-  @media (min-width: $mobile-width) {
-    width: min-content;
-    margin-bottom: 34px;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: max-content;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-bottom: 56px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 7px 69px;
-    margin-bottom: 53px;
   }
 }

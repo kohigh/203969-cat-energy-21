@@ -22,6 +22,11 @@
   list-style: none;
 }
 
+@mixin reset-background {
+  background: none no-repeat;
+  background-size: 100%;
+}
+
 @mixin default-link {
   color: $link-color;
   font-family: $font-main;

@@ -13,13 +13,18 @@
 }
 
 .nav__routes-item {
-  padding: 21px 0;
-  border: 1px solid $nav-border;
-  border-right: none;
-  border-left: none;
+  padding: 21px 0 20px;
   text-align: center;
 
+  @media (min-width: $mobile-width) {
+    border-top: 1px solid $nav-border;
+    border-right: none;
+    border-left: none;
+  }
+
   @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+
     border: none;
   }
 
@@ -30,17 +35,28 @@
   }
 
   &:last-child {
-    border-bottom: 0;
+    @media (max-width: $tablet-width - 1) {
+      border-bottom: 2px solid $nav-border;
+    }
   }
 
-  & + & {
-    border-top: 0;
+  &--active {
+    @media (min-width: $tablet-width) {
+      border-bottom: 2px solid $nav-active-tablet;
+    }
+  }
+
+  .page__body--index &--active {
+    @media (min-width: $desktop-width) {
+      border-bottom: 2px solid $nav-active-desktop;
+    }
   }
 }
 
 .nav__routes-link {
   @include default-link;
 
+  color: $black;
   display: inline-block;
   font-family: $font-main;
   font-weight: $font-bold;
@@ -48,13 +64,41 @@
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
+    padding: 8px 0;
     font-size: $font-size-l;
     line-height: 22px;
     letter-spacing: -0.4px;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 7px 0;
     font-size: $font-size-xl;
     line-height: 30px;
+  }
+
+  &[href]:hover {
+    color: $black06;
+  }
+
+  &[href]:active {
+    color: $black03;
+  }
+
+  .page__body--index & {
+    @media (min-width: $desktop-width) {
+      color: $white;
+    }
+  }
+
+  .page__body--index &[href]:active {
+    @media (min-width: $desktop-width) {
+      color: $white03;
+    }
+  }
+
+  .page__body--index &[href]:hover {
+    @media (min-width: $desktop-width) {
+      color: $white06;
+    }
   }
 }

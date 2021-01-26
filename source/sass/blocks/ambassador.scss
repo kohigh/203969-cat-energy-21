@@ -1,7 +1,12 @@
 .ambassador {
   background-color: $ambassador-background;
 
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient($catalog-background-gr1 620px, $catalog-background-gr2 620px);
+  }
+
   @media (min-width: $desktop-width) {
+    background-image: linear-gradient($catalog-background-gr1 195px, $catalog-background-gr2 195px);
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -15,55 +20,57 @@
     "header"
     "results"
     "expenses";
-  padding-top: 29px;
+
+  @media (min-width: $mobile-width) {
+    padding-top: 29px;
+    row-gap: 25px;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 44px;
     grid-template-areas:
       "header header"
       "results expenses";
+    row-gap: 53px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-right: 60px;
+    padding-top: 59px;
+    padding-right: 130px;
+    row-gap: 0;
     grid-template-areas:
-      "header header"
-      "results results"
-      "expenses expenses";
-    grid-template-rows: min-content 1fr 1fr;
+      "header"
+      "results"
+      "expenses";
   }
 }
 
-.ambassador__title {
-  margin-bottom: 35px;
+.ambassador__top {
+  grid-area: header;
+
+  display: grid;
+
+  @media (min-width: $mobile-width) {
+    row-gap: 35px;
+  }
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 64px;
+    row-gap: 64px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 146px;
+    row-gap: 116px;
+    margin-bottom: 36px;
   }
 }
 
 .ambassador__description {
   @include reset-margin-padding;
 
-  margin-bottom: 25px;
-
   @media (min-width: $tablet-width) {
-    margin-bottom: 53px;
     font-size: $font-size-m;
     line-height: 24px;
   }
-
-  @media (min-width: $desktop-width) {
-    margin-bottom: 68px;
-  }
-}
-
-.ambassador__top {
-  grid-area: header;
 }
 
 .ambassador__results {
@@ -71,10 +78,18 @@
 
   grid-area: results;
   display: flex;
-  margin-bottom: 60px;
+
+  @media (min-width: $mobile-width) {
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+  }
 }
 
 .ambassador__border-wrapper {
+  @include reset-margin-padding;
   width: 124px;
   height: 56px;
   margin-right: 32px;
@@ -95,12 +110,14 @@
 }
 
 .ambassador__result-wrapper {
+  @include reset-margin-padding;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .ambassador__result {
+  @include reset-margin-padding;
   margin-bottom: 8px;
   font-family: $font-main;
   font-weight: $font-regular;
@@ -119,7 +136,7 @@
 .ambassador__measure {
   @include reset-margin-padding;
 
-  background-color: $ambassador-measure-background;
+  background-color: $ambassador-measure-mobile;
   font-family: $font-additional;
   font-size: $font-size-xs;
   line-height: 12px;
@@ -128,9 +145,14 @@
   padding: 0 10px;
 
   @media (min-width: $tablet-width) {
+    background-color: $ambassador-measure-tablet;
     padding: 0 6px;
     font-size: $font-size-s;
     line-height: $font-size-s;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $ambassador-measure-desktop;
   }
 }
 
@@ -138,7 +160,6 @@
   @include reset-margin-padding;
 
   grid-area: expenses;
-  margin-bottom: 40px;
   font-family: $font-main;
   line-height: $font-size-xl;
   text-transform: uppercase;

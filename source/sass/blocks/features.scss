@@ -1,14 +1,19 @@
 .features {
   @include block-padding;
 
-  padding-top: 27px;
+  @media (min-width: $mobile-width) {
+    padding-top: 29px;
+    margin-bottom: 42px;
+  }
 
   @media (min-width: $tablet-width) {
-    padding-top: 41px;
+    padding-top: 45px;
+    margin-bottom: 36px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 69px;
+    padding-top: 71px;
+    margin-bottom: 0;
   }
 }
 
@@ -72,8 +77,8 @@
   &::after {
     z-index: 1;
     content: "";
-    top: 14px;
-    left: 15px;
+    top: 13px;
+    left: 17px;
     position: absolute;
     background-repeat: no-repeat;
 
@@ -84,25 +89,25 @@
   }
 
   &--healthy::after {
-    background-image: url("../../img/features-healthy.png");
+    background-image: url("../img/index/mobile/features-healthy.svg");
     width: 30px;
     height: 32px;
   }
 
   &--flexible::after {
-    background-image: url("../../img/features-flexible.png");
+    background-image: url("../img/index/mobile/features-flexible.svg");
     width: 29px;
     height: 31px;
   }
 
   &--nutritious::after {
-    background-image: url("../../img/features-nutricious.png");
-    width: 24px;
+    background-image: url("../img/index/mobile/features-nutritious.svg");
+    width: 25px;
     height: 30px;
   }
 
   &--effective::after {
-    background-image: url("../../img/features-effective.png");
+    background-image: url("../img/index/mobile/features-effective.svg");
     width: 32px;
     height: 33px;
   }
@@ -116,8 +121,7 @@
 .features__description {
   @include reset-margin-padding;
 
-  padding-top: 2px;
-  padding-left: $features-logo-px-mobile + 20px;
+  padding: 2px 0 2px $features-logo-px-mobile + 20px;
 
   @media (min-width: $tablet-width) {
     @include reset-margin-padding;

@@ -10,8 +10,12 @@
 <body class="page__body">
   <header class="header header--no-js">
     <div class="header__top">
-      <a class="header__logo">
-        <!--        TODO: Add logo svg(icon + text) -->
+      <a class="header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="./img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+          <img class="header__logo-img" src="./img/logo-mobile.svg" alt="Лого название «CAT ENERGY»" width="191" height="38">
+        </picture>
       </a>
       <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     </div>
@@ -19,13 +23,13 @@
       <nav class="nav">
         <ul class="nav__routes">
           <li class="nav__routes-item nav__routes-item--active">
-            <a class="nav__routes-link">Главная</a>
+            <a class="nav__routes-link" href="index.html">Главная</a>
           </li>
           <li class="nav__routes-item">
-            <a class="nav__routes-link" href="./catalog.html">Каталог продукции</a>
+            <a class="nav__routes-link" href="./catalog.html">Каталог&nbsp;продукции</a>
           </li>
           <li class="nav__routes-item">
-            <a class="nav__routes-link" href="./form.html">Подбор программы</a>
+            <a class="nav__routes-link" href="./form.html">Подбор&nbsp;программы</a>
           </li>
         </ul>
       </nav>
@@ -38,11 +42,11 @@
     <section class="footer__contact contact">
       <h2 class="visually-hidden">Как нас найти</h2>
       <div class="contact__attention-wrapper">
-        <p class="contact__attention">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="contact__attention">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
         <address class="contact__address">
           ул. Большая
           Конюшенная, д. 19/8
-          Санкт-Петербург
+          <span class="contact__city">Санкт-Петербург</span>
         </address>
       </div>
       <iframe
@@ -53,39 +57,48 @@
       </iframe>
     </section>
     <div class="footer__bottom-wrapper">
-      <a class="footer__logo">
-        <img src="https://via.placeholder.com/128x24" alt="Лого название «CAT ENERGY»" width="128" height="24">
+      <a class="footer__logo" href="index.html">
+        <svg class="footer__logo-img" width="128" height="24">
+          <use xlink:href="./img/icons.svg#logo-text"></use>
+        </svg>
       </a>
-      <section class="footer__socials socials">
+      <section class="socials">
         <h2 class="visually-hidden">Наши социальные сети</h2>
         <ul class="socials__list">
-          <li>
+          <li class="socials__item">
             <a href="https://via.placeholder.com/vk">
               <span class="visually-hidden">ВКонтакте</span>
-              <!--            TODO: svg vk-->
+              <svg class="socials__icon socials__icon--vk" width="23" height="16">
+                <use xlink:href="./img/icons.svg#socials-vk"></use>
+              </svg>
             </a>
           </li>
-          <li>
+          <li class="socials__item">
             <a href="https://via.placeholder.com/ig">
               <span class="visually-hidden">Инстаграм</span>
-              <!--            TODO: svg ig-->
+              <svg class="socials__icon socials__icon--ig" width="16" height="16">
+                <use xlink:href="./img/icons.svg#socials-ig"></use>
+              </svg>
             </a>
           </li>
-          <li>
+          <li class="socials__item">
             <a href="https://via.placeholder.com/fb">
               <span class="visually-hidden">Фейсбук</span>
-              <!--            TODO: svg fb-->
+              <svg class="socials__icon socials__icon--fb" width="22" height="22">
+                <use xlink:href="./img/icons.svg#socials-fb"></use>
+              </svg>
             </a>
           </li>
         </ul>
       </section>
-      <p class="footer__copyright copyright">
-        <span class="copyright__name">HTML Academy</span>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <!--        TODO: svg htmlacademy-->
-        </a>
-      </p>
+      <a class="footer__copyright" href="https://htmlacademy.ru/intensive/htmlcss">
+        <span class="footer__copyright-name">HTML Academy</span>
+        <svg class="footer__copyright-logo" width="27" height="34">
+          <use xlink:href="./img/icons.svg#footer-copyright"></use>
+        </svg>
+      </a>
     </div>
   </footer>
+  <script src="./js/script.js" async></script>
 </body>
 </html>

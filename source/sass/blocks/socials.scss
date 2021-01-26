@@ -1,3 +1,18 @@
+.socials {
+  padding-top: 20px;
+  padding-bottom: 15px;
+
+  border: 1px solid $footer-hr;
+  border-right: none;
+  border-left: none;
+
+  @media (min-width: $tablet-width) {
+    @include reset-margin-padding;
+
+    border: none;
+  }
+}
+
 .socials__list {
   @include reset-list;
   @include reset-margin-padding;
@@ -9,23 +24,35 @@
   justify-content: center;
 
   @media (min-width: $tablet-width) {
-    justify-content: flex-end;
+    width: 129px;
+    justify-content: initial;
   }
 }
 
 .socials__item {
-  margin-right: 33px;
+  margin-right: 34px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 26px;
+  }
 
   &:last-child {
     margin-right: 0;
   }
-
-  @media (min-width: $tablet-width) {
-    margin-right: 27px;
-  }
 }
 
 .socials__icon {
+  fill: $black;
+
+  &:hover {
+    fill: #68b738;
+  }
+
+  &:active {
+    fill: #68b738;
+    opacity: 0.3;
+  }
+
   &--vk {
     @media (min-width: $tablet-width) {
       width: 30px;
@@ -34,6 +61,8 @@
   }
 
   &--ig {
+    fill: #666666;
+
     @media (min-width: $tablet-width) {
       width: 23px;
       height: 23px;
@@ -41,6 +70,14 @@
   }
 
   &--fb {
+    fill: none;
+    stroke: #666666;
+
+    &:hover {
+      fill: none;
+      stroke: #68b738;
+    }
+
     @media (min-width: $tablet-width) {
       width: 28px;
       height: 33px;
