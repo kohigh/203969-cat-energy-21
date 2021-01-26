@@ -45,6 +45,7 @@
   font-size: $font-size-m;
   line-height: 20px;
   text-transform: uppercase;
+  color: $dark-contact;
 
   @media (min-width: $tablet-width) {
     @include reset-margin-padding;
@@ -58,6 +59,7 @@
   font-family: $font-additional;
   font-style: normal;
   line-height: 20px;
+  color: $spec-dark-gray;
 
   @media (min-width: $tablet-width) {
     font-size: $font-size-m;

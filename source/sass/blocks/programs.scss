@@ -216,6 +216,7 @@
 .programs__description {
   @include reset-margin-padding;
 
+  color: $spec-dark-gray;
   grid-area: description;
   position: relative;
 

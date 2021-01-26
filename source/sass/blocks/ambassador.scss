@@ -67,6 +67,8 @@
 .ambassador__description {
   @include reset-margin-padding;
 
+  color: $spec-dark-gray;
+
   @media (min-width: $tablet-width) {
     font-size: $font-size-m;
     line-height: 24px;
@@ -137,6 +139,7 @@
   @include reset-margin-padding;
 
   background-color: $ambassador-measure-mobile;
+  color: $spec-dark-gray;
   font-family: $font-additional;
   font-size: $font-size-xs;
   line-height: 12px;

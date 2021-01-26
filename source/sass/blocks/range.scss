@@ -262,11 +262,18 @@
 }
 
 .range__input[type="range"]::-webkit-slider-thumb {
-  height: 34px;
-  width: 34px;
-  border-radius: 50%;
-  background: $range-toggle;
+  height: 38px;
+  width: 38px;
+  background-image: url("../img/icons/slider-toggle.svg");
   cursor: pointer;
   appearance: none;
+  margin-top: -14px;
+}
+
+.range__input[type="range"]::-moz-range-thumb {
+  height: 38px;
+  width: 38px;
+  background-image: url("../img/icons/slider-toggle.svg");
+  cursor: pointer;
   margin-top: -14px;
 }

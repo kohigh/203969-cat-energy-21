@@ -223,7 +223,9 @@
   @media (min-width: $mobile-width) {
     @include reset-background;
 
-    background-image: url("../img/catalog/mobile/additional-promo@1x.jpg");
+    background-image:
+      url("../img/catalog/mobile/additional-promo@1x.jpg"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
     background-position: center;
 
     @media (min-resolution: 2dppx) {
@@ -236,7 +238,9 @@
   @media (min-width: $tablet-width) {
     @include reset-background;
 
-    background-image: url("../img/catalog/tablet/additional-promo@1x.jpg");
+    background-image:
+      url("../img/catalog/tablet/additional-promo@1x.jpg"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
     height: 200px;
     padding: 72px 125px;
     display: grid;
@@ -246,7 +250,9 @@
     @media (min-resolution: 2dppx) {
       @include reset-background;
 
-      background-image: url("../img/catalog/tablet/additional-promo@2x.jpg");
+      background-image:
+        url("../img/catalog/tablet/additional-promo@2x.jpg"),
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
     }
   }
 
@@ -257,12 +263,16 @@
     padding: 40px;
     width: 245px;
     height: 100%;
-    background-image: url("../img/catalog/desktop/additional-promo@1x.jpg");
+    background-image:
+      url("../img/catalog/desktop/additional-promo@1x.jpg"),
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
 
     @media (min-resolution: 2dppx) {
       @include reset-background;
 
-      background-image: url("../img/catalog/desktop/additional-promo@2x.jpg");
+      background-image:
+        url("../img/catalog/desktop/additional-promo@2x.jpg"),
+        linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85));
     }
   }
 
