@@ -36,7 +36,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 59px;
-    padding-right: 130px;
+    padding-right: 140px;
     row-gap: 0;
     grid-template-areas:
       "header"
@@ -66,6 +66,8 @@
 
 .ambassador__description {
   @include reset-margin-padding;
+
+  color: $spec-dark-gray;
 
   @media (min-width: $tablet-width) {
     font-size: $font-size-m;
@@ -137,6 +139,7 @@
   @include reset-margin-padding;
 
   background-color: $ambassador-measure-mobile;
+  color: $spec-dark-gray;
   font-family: $font-additional;
   font-size: $font-size-xs;
   line-height: 12px;

@@ -121,6 +121,7 @@
 .features__description {
   @include reset-margin-padding;
 
+  color: $spec-dark-gray;
   padding: 2px 0 2px $features-logo-px-mobile + 20px;
 
   @media (min-width: $tablet-width) {

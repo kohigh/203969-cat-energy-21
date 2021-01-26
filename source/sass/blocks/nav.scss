@@ -4,6 +4,7 @@
 
   @media (min-width: $mobile-width) {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
   }
 
@@ -31,6 +32,10 @@
   &:not(:last-child) {
     @media (min-width: $tablet-width) {
       margin-right: 33px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 37px;
     }
   }
 
@@ -64,10 +69,10 @@
   line-height: 20px;
 
   @media (min-width: $tablet-width) {
+    font-weight: $font-regular;
     padding: 8px 0;
     font-size: $font-size-l;
     line-height: 22px;
-    letter-spacing: -0.4px;
   }
 
   @media (min-width: $desktop-width) {

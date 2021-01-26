@@ -9,6 +9,7 @@
   @include reset-margin-padding;
 
   box-sizing: border-box;
+  overflow-x: hidden;
   color: $body-color;
   font-family: $font-additional;
   font-weight: $font-regular;
