@@ -90,15 +90,15 @@
     }
   }
 
-  .page__body--index &[href]:hover {
-    @media (min-width: $desktop-width) {
-      color: $white06;
-    }
-  }
-
   .page__body--index &[href]:active {
     @media (min-width: $desktop-width) {
       color: $white03;
+    }
+  }
+
+  .page__body--index &[href]:hover {
+    @media (min-width: $desktop-width) {
+      color: $white06;
     }
   }
 }
